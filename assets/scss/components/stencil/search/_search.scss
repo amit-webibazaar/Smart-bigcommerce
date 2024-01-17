@@ -1,7 +1,9 @@
 // =============================================================================
 // SEARCH
 // =============================================================================
-
+.search-refine{
+    color: stencilColor("color-textBase--hover");
+}
 .search-suggestion {
     margin-bottom: spacing("single") + spacing("third");
 
