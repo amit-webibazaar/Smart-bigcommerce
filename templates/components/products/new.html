@@ -1,2 +1,17 @@
-<h2 class="page-heading">{{lang 'products.new' }}</h2>
-{{> components/products/carousel products=products list="New Products"}}
+{{#if theme_settings.homepage_new_products_show}}
+<div class="section-spacing">
+    <div class="new-product">
+        <div class="container ">
+            <div class="myheadeing">
+                <h2 class="page-heading">
+                    {{lang 'products.new' }}
+                    <p>{{theme_settings.subheading-new-product}}</p>
+                    <span class="head-line"></span>
+                </h2>
+            </div>
+            {{> components/products/carousel products=products list="New Products"}}
+        </div>
+    </div>
+</div>
+{{/if}}
+

@@ -1,9 +1,18 @@
-<h2 class="page-heading">{{lang 'products.featured' }}</h2>
-
-<ul class="productGrid productGrid--maxCol{{ columns }}" data-product-type="featured" data-list-name="Featured Products">
-    {{#each products}}
-        <li class="product">
-                {{>components/products/card settings=../settings theme_settings=../theme_settings customer=../customer event="list" position=(add @index 1)}}
-        </li>
-    {{/each}}
-</ul>
+{{inject 'noCompareMessage' (lang 'compare.no_compare')}}
+{{#if theme_settings.homepage_featured_products_show}}
+{{{region name="home_above_featured_products"}}}
+<div class="featured-bg section-spacing">
+    <div class="featured">
+        <div class="container">
+            <div class="myheadeing">
+                <h2 class="page-heading">{{lang 'products.featured' }}<p>{{theme_settings.subheading-featured-product}}</p>
+                    <span class="head-line"></span>
+                </h2>
+            </div>
+            <div data-product-type="featured" class="">
+                    {{> components/products/featured-carousel products=products show_compare=products.show_compare theme_settings=theme_settings}}
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}

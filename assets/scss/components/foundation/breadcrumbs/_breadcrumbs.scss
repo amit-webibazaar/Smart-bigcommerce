@@ -13,10 +13,12 @@
 // -----------------------------------------------------------------------------
 
 ol.breadcrumbs {
-    display: none; // 1
     font-size: 0; // 2
     overflow: visible;
-    text-align: center;
+    text-align: left;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: stencilColor("Content_Backround_Color") !important;
     @include breakpoint("small") {
         display: block; // 1
     }
@@ -26,11 +28,12 @@ ol.breadcrumbs {
     display: inline-block;
     float: none;
     margin-right: 0.25rem;
-
+    background: none;
+    padding: 0;
     &.is-active {
         > .breadcrumb-label {
             cursor: pointer;
-            font-weight: 700;
+            
         }
     }
 
@@ -43,4 +46,11 @@ ol.breadcrumbs {
         margin: 0 0.25rem;
         transform: rotate(15deg);
     }
+}
+.breadcrumbs-bg{
+        overflow-x: auto!important;
+    white-space: nowrap;
+}
+.breadcrumb a{
+    color: stencilColor("color-textBase")!important;
 }

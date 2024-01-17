@@ -17,53 +17,58 @@ product_results:
 {{#partial "page"}}
 {{{ stylesheet '/assets/scss/vendor/jstree/style.css' }}}
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<div class="container search-resul">
 <section class="nav">
     {{#if forms.search.query}}
         <div id="search-results-heading">
             {{>components/search/heading}}
         </div>
     {{/if}}
-    <nav class="navBar navBar--sub search-nav">
-        <span id="search-tabs-widget-description" class="aria-description--hidden">
-            {{lang 'search.tabs_accesibility_hint'}}
-        </span>
-        <ul role="tablist" class="navBar-section account-navigation" data-search-page-tabs>
-            <li role="presentation" class="navBar-item">
-                <a aria-describedby="search-tabs-widget-description" role="tab" aria-controls="product-listing-container" id="search-results-product-count" class="navBar-action" href="{{forms.search.product_url}}" data-product-results-toggle>
-                    {{>components/search/product-count}}
-                </a>
-            </li>
-            <li role="presentation" class="navBar-item">
-                <a aria-describedby="search-tabs-widget-description" role="tab" aria-controls="search-results-content" id="search-results-content-count" class="navBar-action" href="{{forms.search.content_url}}" data-content-results-toggle>
-                    {{>components/search/content-count}}
-                </a>
-            </li>
-            {{#unless product_results.faceted_search_enabled}}
-                <li class="navBar-item navBar-item--separate">
-                    <a class="navBar-action toggleLink" data-collapsible="advanced-search-content" href="#" aria-controls="advanced-search-content" aria-expanded="false">
-                        <span class="toggleLink-text toggleLink-text--on">
-                            {{lang 'forms.search.hide'}}
-                        </span>
-                        <span class="toggleLink-text toggleLink-text--off">
-                            {{lang 'forms.search.show'}}
-                        </span>
+    <div class="search-all-col">
+        <nav class="navBar navBar--sub search-nav">
+            <span id="search-tabs-widget-description" class="aria-description--hidden">
+                {{lang 'search.tabs_accesibility_hint'}}
+            </span>
+            <ul role="tablist" class="navBar-section account-navigation" data-search-page-tabs>
+                <li role="presentation" class="navBar-item">
+                    <a aria-describedby="search-tabs-widget-description" role="tab" aria-controls="product-listing-container" id="search-results-product-count" class="navBar-action" href="{{forms.search.product_url}}" data-product-results-toggle>
+                        {{>components/search/product-count}}
                     </a>
                 </li>
-            {{/unless}}
-        </ul>
-    </nav>
+                <li role="presentation" class="navBar-item">
+                    <a aria-describedby="search-tabs-widget-description" role="tab" aria-controls="search-results-content" id="search-results-content-count" class="navBar-action" href="{{forms.search.content_url}}" data-content-results-toggle>
+                        {{>components/search/content-count}}
+                    </a>
+                </li>
+                {{#unless product_results.faceted_search_enabled}}
+                    <li class="navBar-item navBar-item--separate">
+                        <a class="navBar-action toggleLink" data-collapsible="advanced-search-content" href="#" aria-controls="advanced-search-content" aria-expanded="false">
+                            <span class="toggleLink-text toggleLink-text--on">
+                                {{lang 'forms.search.hide'}}
+                            </span>
+                            <span class="toggleLink-text toggleLink-text--off">
+                                {{lang 'forms.search.show'}}
+                            </span>
+                        </a>
+                    </li>
+                {{/unless}}
+            </ul>
+        </nav>
+    </div>
     {{#unless product_results.faceted_search_enabled}}
         {{>components/search/advanced-search}}
     {{/unless}}
 </section>
 
-<section class="page">
+<section class="row">
     {{#if product_results.faceted_search_enabled}}
-        <aside class="page-sidebar{{#if forms.search.section '!=' 'product'}} u-hiddenVisually{{/if}}" id="faceted-search-container">
+    <aside id="colm-left">
+        <aside class="{{#if forms.search.section '!=' 'product'}} u-hiddenVisually{{/if}} col-lg-12 col-sm-12 col-md-12 col-xs-12 hidden-sm hidden-xs" id="faceted-search-container">
             {{> components/faceted-search/index product_results}}
         </aside>
+    </aside>
     {{/if}}
-    <div class="page-content">
+    <div class="col-lg-9 col-sm-12 col-md-12 col-xs-12 colright all-col-search" id="content">
         {{#if forms.search.has_suggestions}}
             <div class="panel panel--large">
                 <div class="panel-body">
@@ -138,6 +143,13 @@ product_results:
         {{{region name="search_below_content"}}}
     </div>
 </section>
-
+</div>
+{{#if page_type '===' 'search'}}
+<style>
+    .pagination-list {
+        display: none;
+    }
+</style>
+{{/if}}
 {{/partial}}
 {{> layout/base}}

@@ -13,6 +13,7 @@
 .suggestion-title {
     margin-top: 0;
     text-transform: inherit;
+    font-size: 16px;
 }
 
 .advancedSearch-form {
@@ -31,12 +32,19 @@
     }
 
     .modal-close {
-        display: none;
 
         @include breakpoint("medium") {
             display: block;
+            top: 0rem;
+            left: auto;
+            right: 0rem;
         }
     }
+}
+.wb-search .form-input{
+    border-radius: 6px 6px !important;
+    background: #e5e5e5;
+    height: 45px;
 }
 
 .advancedSearch-separator {
@@ -94,4 +102,253 @@
 
 .search-nav {
     position: relative;
+}
+.d-search button {
+    background: 0 0;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+.d-search button svg{
+    fill: none;
+    stroke: #000;
+}
+.wbSearch {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: rgba(0,0,0,.7);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    transform: translateY(-100%);
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    padding: 39px;
+    left: 0;
+    margin: 0 auto;
+}
+body.active-search .wbSearch {
+    opacity: 1;
+    transform: translateY(0);
+}
+.wbSearch .form {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 0;
+}
+#search .wb-search-btn {
+    height: 45px;
+    border-radius: 6px 6px;
+    padding: 10px 30px;
+    position: relative;
+    background: stencilColor("button--primary-backgroundColor");
+    font-size: 0px;
+}
+#search .input-group-btn{
+    margin-left: 15px;
+}
+#search .wb-search-btn:hover{
+    background: stencilColor("button--primary-backgroundColorHover");
+}
+.wb-search-btn svg{
+    stroke: stencilColor("color-white");
+    fill: transparent;
+}
+.wbSearch .close-nav{
+    margin-left: 15px;
+    display: inline-block;
+    color: stencilColor("color-white");
+    font-size: 18px;
+    position: relative;
+    top: 1px;
+}
+.d-search:hover svg{
+    stroke: stencilColor("navUser-color-hover");
+}
+.quickSearchResults {
+     position: absolute;
+    z-index: 99;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 0 15px;
+    padding: 0px;
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, .20%);
+    max-height: 344px;
+    overflow-y: scroll;
+    left: -15px;
+    right: -15px;
+    margin-top: 0;
+    top: 120px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.quickSearchResults .product .card{
+    margin: 0px!important;
+    border: 1px solid #eee;
+    border-radius:  10px;
+}
+.quickSearchResults .productGrid li.product .card-body {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+.quickSearchResults .productGrid li.product .card-body .card-title{
+    padding: 0px;
+}
+.quickSearchResults .productGrid li.product .card-body .card-rating-s{
+    padding: 8px 0px;
+}
+.quickSearchResults .productGrid li.product .card-figure .sale-flag-sash{
+    display: none;
+}
+.quickSearchResults .productGrid li.product .card-figure .card-img-container img{
+    border-radius: 10px 0 0 10px;
+}
+.quickSearchResults .card .row {
+    margin: 0;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.form-control:focus{
+    box-shadow:none;
+}
+.quickSearchResults .listItem-figure .sale-flag-sash{
+    display: none;
+}
+.search-resul #colm-left #faceted-search-container{
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 10px;
+    background: stencilColor("Content_Backround_Color");
+}
+.panel--large .panel-body{
+    border-radius: 10px;
+}
+.search-nav{
+    margin: 2.5rem 0;
+}
+.quickSearchResults .category-list-desc{
+    display: none;
+}
+.quickSearchResults .listItem-body .listItem-content{
+    text-align: left;
+}
+.quickSearchResults .productGrid li.product {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+@media(min-width: 801px) and (max-width: 1199px){
+    .quickSearchResults .listItem-figure{
+        width: 22% !important;
+    }
+    .quickSearchResults .listItem-body {
+        width: 78% !important;
+    }
+}
+@media(min-width: 1200px){
+    .quickSearchResults .listItem-figure{
+        width: 22% !important;
+    }
+    .quickSearchResults .listItem-body {
+        width: 78% !important;
+    }
+}
+
+
+@media(max-width: 991px){
+    .quickSearchResults{
+        left: 0px;
+        right: 0px;
+        margin: 15px;
+    }
+}
+@media(max-width: 800px){
+    .header-logo--center .wbSearch{
+        padding: 0px;
+        position: unset;
+        opacity: 1;
+        transform: unset;
+        background: none;
+    }
+    .quickSearchResults{
+        top: 75px;
+    }
+    .quickSearchResults .listItem-figure{
+        width: 22% !important;
+    }
+    .quickSearchResults .listItem-body {
+        width: 78% !important;
+    }
+    .search-resul #colm-left #faceted-search-container{
+        border: none;
+        padding: 0px 15px;
+    }
+    .quickSearchResults .modal-close {
+        display: block;
+        top: 0rem;
+        left: auto;
+        right: 0rem;
+    }
+}
+@media(max-width: 600px){
+    .quickSearchResults .productGrid li.product{
+        padding: 0px;
+    }
+}
+@media(max-width: 575px){
+    .wbSearch{
+        padding: 26px;
+    }
+    .quickSearchResults{
+        top: 79px;
+    }
+}
+@media(max-width: 550px){
+    .quickSearchResults .listItem-figure{
+        display: inline-block;
+        float: none;
+    }
+    .quickSearchResults .listItem-body{
+        float: right;
+        padding: 0px 10px;
+    }
+}
+@media(max-width: 425px){
+    .wbSearch{
+        padding: 7px;
+    }
+    .quickSearchResults {
+        top: 57px;
+        margin: 0 15px;
+    }
+}
+@media(max-width: 375px){
+    .quickSearchResults .card-figcaption-body{
+        display: none;
+    }
+}
+@media(max-width: 360px){
+    .quickSearchResults .listItem-figure {
+        width: 25% !important;
+    }
+    .quickSearchResults .listItem-body {
+        width: 75% !important;
+    }
+}
+
+@media(max-width: 320px){
+    .quickSearchResults .productGrid li.product .card-body{
+        padding-top: 0px;
+    }
+    .quickSearchResults .productGrid li.product .card-body .card-rating-s {
+        padding: 0px 0px;
+    }
 }

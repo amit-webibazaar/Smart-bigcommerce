@@ -9,21 +9,38 @@
 
 
 .body {
-    margin-bottom: spacing("double") * 2;
-    margin-top: spacing("single"); // 1
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: stencilColor("secondary-background-color");
 
     @include breakpoint("medium") {
-        margin-top: spacing("single") + spacing("base"); // 1
+       
     }
 }
-
+.page {
+    margin: 0!important;
+}
 
 .page {
     @include grid-row(
         $behavior: nest
     );
 }
-
+.default .body{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0;
+    padding-top: 0;
+    z-index: 0;
+}
+.all_pages, .sitemap-page, #contact-us-page{
+    background: stencilColor("color-white");
+    border-radius: 10px;
+    padding: 15px;
+}
+.sitemap-page h2{
+    margin: 0 0 15px 0;
+}
 .page-content,
 .page-content--full {
     @include grid-column(12);
@@ -44,6 +61,10 @@
 }
 
 .page-sidebar {
+    width: 100% !important;
+    background: stencilColor("Content_Backround_Color");
+    border: container("border");
+    border-radius: 8px !important;
     @include grid-column(12);
     position: relative;
 
@@ -54,4 +75,8 @@
             @include grid-column(9);
         }
     }
+}
+.createaccount_thanks .body{
+    margin-bottom: 100px;
+    margin-top: 100px;
 }

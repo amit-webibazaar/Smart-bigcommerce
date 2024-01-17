@@ -15,49 +15,89 @@
 // 2. Prevent screen flicker when CSS transition is applied
 //
 // -----------------------------------------------------------------------------
-
+.all-btn {
+    position: absolute;
+    right: 5px;
+    top: 35px;
+}
+.heroCarousel .slick-next, .heroCarousel .slick-prev{
+    display: inline-block;
+}
+.all-btn .slick-prev svg, .all-btn .slick-next svg{
+    stroke: stencilColor("color-white");
+}
+.slick-prev{
+    left: auto!important;
+    right: 75px;
+}
+.slick-next{
+    right: 15px!important;
+}
 .slick-next,
 .slick-prev {
     @include carouselOpaqueBackgrounds($slick-arrow-bgColor);
-    border: 1px solid $slick-arrow-borderColor;
-    height: remCalc(61px);
-    margin-top: -(remCalc(15px));
-    padding: remCalc(10px);
-    width: remCalc(40px);
+    background-color: stencilColor("button--primary-backgroundColorActive")!important;
+    border-radius: 8px;
+    padding: 19px;
+    // margin-top: 30px;
+    width: 46px;
+    height: 46px;
     z-index: 1;
+    opacity: 1;
+    cursor: pointer !important;
 
     &::before {
         background-position: 50%;
         background-repeat: no-repeat;
         background-size: 100%;
         display: block;
-        height: remCalc(41px);
-        width: remCalc(20px);
+        height: remCalc(16px);
+        width: remCalc(16px);
     }
 
     &:hover,
     &:focus {
         @include carouselOpaqueBackgrounds($slick-arrow-bgColor); // 1
-        background-position: 50%;
+        background-position: 50%; 
         background-repeat: no-repeat;
         background-size: 100%;
+        background-color: stencilColor("button--primary-backgroundColorHover")!important;
     }
+}
+.slick-next:hover svg, .slick-prev:hover svg, .slick-next:focus svg, .slick-prev:focus svg{
+    stroke: stencilColor("color-white");
+}
+.productGrid:hover .slick-arrow{
+    opacity: 1 !important;
+}
+.top-product{
+    list-style-type: none;
+}
+
+.slick-slide div .productCarousel-slide {
+    margin-bottom: 30px;
+}
+.slick-slide div:last-child .productCarousel-slide {
+    margin-bottom: 0;
 }
 
 .slick-next {
-    right: $slick-arrows-offset;
+    right: 0;
 
     @include breakpoint("large") {
-        right: -(spacing("double") + spacing("quarter"));
+        
     }
 
     &::before {
         @include carousel-arrow-color( $slick-arrow-color, "next");
+        height: 12px;
+        width: 12px;
     }
 
     &:hover {
         &::before {
             @include carousel-arrow-color( $slick-arrow-color-hover, "next");
+            filter: invert(1);
         }
     }
 }
@@ -66,24 +106,75 @@
     left: $slick-arrows-offset;
 
     @include breakpoint("large") {
-        left: -(spacing("double") + spacing("quarter"));
+        
     }
 
     &::before {
         @include carousel-arrow-color( $slick-arrow-color, "prev");
+        height: 12px;
+        width: 12px;
     }
 
     &:hover {
         &::before {
             @include carousel-arrow-color( $slick-arrow-color-hover, "prev");
+            filter: invert(1);
         }
     }
 }
 
 .slick-slide img {
     display: block;
-    width: 100%;
 }
+
+.featured-product .slick-prev::before{
+    display: none;
+}
+.featured-product .slick-next::before{
+    display: none;
+}
+.top-product .slick-prev::before{
+    display: none;
+}
+.top-product .slick-next::before{
+    display: none;
+}
+.grid-tab-cat .slick-prev::before{
+    display: none;
+}
+.grid-tab-cat .slick-next::before{
+    display: none;
+}
+.new-productt .slick-prev::before{
+    display: none;
+}
+.new-productt .slick-next::before{
+    display: none;
+}
+.recent-post .slick-prev::before{
+    display: none;
+}
+.recent-post .slick-next::before{
+    display: none;
+}
+.related-product .slick-prev::before{
+    display: none;
+}
+.related-product .slick-next::before{
+    display: none;
+}
+.also-viewed-product .slick-prev::before{
+    display: none;
+}
+.also-viewed-product .slick-next::before{
+    display: none;
+}
+.all-btn .slick-next i, .all-btn .slick-prev i {
+    font-size: 26px;
+    color: #7f7f7f;
+    opacity: 1;
+}
+
 
 
 //
@@ -153,7 +244,7 @@
 // -----------------------------------------------------------------------------
 .slick-disabled {
     cursor: $cursor-default-value;
-    opacity: 0.1;
+    opacity: 0.5;
 }
 
 
@@ -174,13 +265,6 @@ div.slick-slider {
     *width: 100%;
 }
 
-//
-// iOS Safari fix https://github.com/kenwheeler/slick/issues/2156
-// -----------------------------------------------------------------------------
-.slick-slide .card-image,
-.slick-slide .heroCarousel-image {
-    -webkit-touch-callout: default;
-}
 
 //
 // Carousel tooltips for buttons and bullets
@@ -188,7 +272,7 @@ div.slick-slider {
 
 .carousel-tooltip {
     @include addFocusTooltip($attr: aria-label);
-    display: none;
+    display: none !important;
     height: 1px;
     margin-top: 10px;
     position: relative;
@@ -291,5 +375,46 @@ div.slick-slider {
     @media (min-width: 375px) {
         max-width: 90px;
         min-width: 80px;
+    }
+}
+
+@media(max-width: 991px){
+    .slick-next,
+.slick-prev{
+    opacity: 1 !important;
+    position: unset;
+    padding:  11px;
+    margin: 0px 5px;
+    text-align: center;
+    display: inline-block;
+    width: 2.28571rem;
+    height: 2.28571rem;
+    transform: none;
+}
+    .all-btn {
+        text-align: center;
+    }
+    .slick-next::before, .slick-prev::before{
+        height: 12px;
+        width: 12px;
+    }
+    .featured-product .slick-prev {
+        margin-top: 0px !important;
+    }
+    .featured-product .slick-next {
+        margin-top: 0px !important;
+    }
+    .all-btn {
+        position: relative;
+        top: 0px;
+        margin-top: 30px;
+    }
+    .slick-dotted.slick-slider {
+        margin-bottom: 0px;
+    }
+}
+@media(max-width: 800px){
+    .all-btn{
+        margin-top: 20px;
     }
 }

@@ -23,8 +23,8 @@ $second_value: str-slice($value_of_swatch_size, $position_of_x + 1);
 
 .form-option-variant--color,
 .form-option-variant--pattern {
-    height: $second_value +"px";
-    width: $first_value +"px";
+    height: 36px;
+    width: 36px;
 }
 
 .form-option-expanded {
@@ -56,5 +56,18 @@ $second_value: str-slice($value_of_swatch_size, $position_of_x + 1);
         position: 50%;
         repeat: no-repeat;
         size: cover;
+    }
+}
+@media(max-width: 425px){
+    .form-option-variant--color, .form-option-variant--pattern {
+        min-height: 28px!important;
+        min-width: 28px !important;
+        width: 28px;
+        height: 28px;
+    }
+    .form-option-variant{
+        min-width: 55px;
+        padding: 4px;
+        min-height: 28px;
     }
 }

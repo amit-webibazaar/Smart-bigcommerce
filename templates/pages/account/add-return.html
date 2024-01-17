@@ -1,6 +1,7 @@
 {{#partial "page"}}
 
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<div class="container">
 <h1 class="page-heading">{{lang 'account.returns.new_return' }}</h1>
 {{> components/account/navigation account_page='returns'}}
 
@@ -90,7 +91,7 @@
                         </fieldset>
                     </div>
                     <div class="form-actions">
-                        <input class="button button--primary" type="submit" value="{{lang 'account.returns.submit_request'}}" />
+                        <input class="button button--primary" type="submit" value="Submit Return Request" />
                     </div>
                 </form>
             {{else}}
@@ -101,6 +102,6 @@
         </section>
     </div>
 </div>
-
+</div>
 {{/partial}}
 {{> layout/base}}

@@ -8,6 +8,8 @@ import Url from 'url';
 import collapsibleFactory from './common/collapsible';
 import 'jstree';
 import nod from './common/nod';
+import ProductDetails from './common/product-details';
+import productOptionGraphql from './set-product-option-with-graphql';
 
 const leftArrowKey = 37;
 const rightArrowKey = 39;
@@ -310,6 +312,8 @@ export default class Search extends CatalogPage {
             $('html, body').animate({
                 scrollTop: 0,
             }, 100);
+        console.log(this.context)
+            productOptionGraphql(this.context)
         }, {
             validationErrorMessages: {
                 onMinPriceError,

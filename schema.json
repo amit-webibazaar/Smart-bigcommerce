@@ -51,6 +51,11 @@
         "id": "body-font",
         "options": [
           {
+            "group": "i18n.Lato",
+            "label": "i18n.Lato",
+            "value": "Google_Lato_400"
+          },
+          {
             "group": "i18n.Karla",
             "label": "i18n.Karla",
             "value": "Google_Karla_400"
@@ -93,6 +98,26 @@
             "label": "18px"
           }
         ]
+      },
+      {
+        "type": "color",
+        "label": "Primary background color",
+        "id": "primary-background-color"
+      },
+      {
+        "type": "color",
+        "label": "Secondary background color",
+        "id": "secondary-background-color"
+      },
+      {
+        "type": "color",
+        "label": "Content background color",
+        "id": "Content_Backround_Color"
+      },
+      {
+        "type": "color",
+        "label": "Custom border color",
+        "id": "custom-border-color"
       },
       {
         "type": "color",
@@ -521,6 +546,46 @@
         "content": "i18n.Header"
       },
       {
+        "type": "heading",
+        "content": "Announcement Bar"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show announcement bar",
+        "force_reload": true,
+        "id": "homepage_announcement_bar_show"
+      },
+      {
+        "type": "text",
+        "label": "Promotion text 1",
+        "id": "top_text"
+      },
+      {
+        "type": "text",
+        "label": "Promotion text 1 Link",
+        "id": "top_text_link"
+      },
+      {
+        "type": "text",
+        "label": "Promotion text 2",
+        "id": "top_text2"
+      },
+      {
+        "type": "text",
+        "label": "Promotion text 2 Link",
+        "id": "top_text_link2"
+      },
+      {
+        "type": "color",
+        "label": "Announcement bar background color",
+        "id": "top-header-backgroundColor"
+      },
+      {
+        "type": "color",
+        "label": "Announcement bar text color",
+        "id": "top-header-textColor"
+      },
+      {
         "type": "color",
         "label": "i18n.HeaderBackground",
         "id": "header-backgroundColor"
@@ -708,6 +773,26 @@
       },
       {
         "type": "heading",
+        "content": "Cart"
+      },
+      {
+        "type": "select",
+        "label": "Cart Type",
+        "id": "cart-type",
+        "force_reload": true,
+        "options": [
+          {
+            "value": "dropdown",
+            "label": "Dropdown"
+          },
+          {
+            "value": "drawer",
+            "label": "Drawer"
+          }
+        ]
+      },
+      {
+        "type": "heading",
         "content": "i18n.UtilityNavigation"
       },
       {
@@ -828,8 +913,23 @@
       },
       {
         "type": "color",
+        "label": "Newslatter Background Color",
+        "id": "footer-newslatter-backgroundColor"
+      },
+      {
+        "type": "color",
+        "label": "Newslatter Text Color",
+        "id": "footer-newslatter-TextColor"
+      },
+      {
+        "type": "color",
         "label": "i18n.FooterBackground",
         "id": "footer-backgroundColor"
+      },
+      {
+        "type": "color",
+        "label": "Footer Text Color",
+        "id": "footer-textColor"
       },
       {
         "type": "heading",
@@ -910,6 +1010,376 @@
   {
     "name": "i18n.HomePage",
     "settings": [
+      {
+        "type": "heading",
+        "content": "Home Page Category"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Home Category",
+        "force_reload": true,
+        "id": "homepage_category_show"
+      },
+      {
+        "type": "text",
+        "label": "Home Category Subtitle",
+        "force_reload": true,
+        "id": "subheading-category",
+        "reference": "homepage_category_show",
+        "reference_default": false
+      },
+      {
+        "type": "heading",
+        "content": "Home Offer Banner"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Home offer banner",
+        "force_reload": true,
+        "id": "home-offer-banner"
+      },
+      {
+        "type": "text",
+        "label": "Homepage offer banner Image",
+        "force_reload": true,
+        "id": "offerbanner-first-img",
+        "reference": "home-offer-banner",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "Homepage Offer Banner first img link",
+        "force_reload": true,
+        "id": "offerbanner-first-img-link",
+        "reference": "home-offer-banner",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "Homepage Offer banner Heading Text",
+        "force_reload": true,
+        "id": "Video-banner-content-heading",
+        "reference": "home-offer-banner",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "Homepage offer banner SubHeading Text",
+        "force_reload": true,
+        "id": "Video-banner-content-subheading",
+        "reference": "home-offer-banner",
+        "reference_default": false
+      },
+      {
+        "type": "heading",
+        "content": "Home Sale Banner"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Home Sale banner",
+        "force_reload": true,
+        "id": "home-sale-banner"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner First Image",
+        "force_reload": true,
+        "id": "salebanner-first-img"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner First Image Link",
+        "force_reload": true,
+        "id": "salebanner-first-img-link"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner First Image Content",
+        "force_reload": true,
+        "id": "salebanner-first-img-cont1"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner First Image Content 2",
+        "force_reload": true,
+        "id": "salebanner-first-img-cont2"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner First Image Content 3",
+        "force_reload": true,
+        "id": "salebanner-first-img-cont3"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner Second Image",
+        "force_reload": true,
+        "id": "salebanner-second-img"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner Second Image Link",
+        "force_reload": true,
+        "id": "salebanner-second-img-link"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner Second Image Content",
+        "force_reload": true,
+        "id": "salebanner-second-img-cont1"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner Second Image Content 2",
+        "force_reload": true,
+        "id": "salebanner-second-img-cont2"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner Thired Image",
+        "force_reload": true,
+        "id": "salebanner-thired-img"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner Thired Image Link",
+        "force_reload": true,
+        "id": "salebanner-thired-img-link"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner Thired Image Content",
+        "force_reload": true,
+        "id": "salebanner-thired-img-cont1"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner Thired Image Content 2",
+        "force_reload": true,
+        "id": "salebanner-thired-img-cont2"
+      },
+      {
+        "type": "text",
+        "label": "Sale Banner Thired Image Content 3",
+        "force_reload": true,
+        "id": "salebanner-thired-img-cont3"
+      },
+      {
+        "type": "heading",
+        "content": "Home Testimonial"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Home Testimonial",
+        "force_reload": true,
+        "id": "home-testimonial"
+      },
+      {
+        "type": "text",
+        "label": "Heading Text",
+        "force_reload": true,
+        "id": "testimonial-heading"
+      },
+      {
+        "type": "text",
+        "label": "Subheading Text",
+        "force_reload": true,
+        "id": "subheading-testimonial"
+      },
+      {
+        "type": "text",
+        "label": "First Testimonial Image",
+        "force_reload": true,
+        "id": "testiimgfirst"
+      },
+      {
+        "type": "text",
+        "label": "First Testimonial Contant",
+        "force_reload": true,
+        "id": "testimonial-contant1"
+      },
+      {
+        "type": "text",
+        "label": "Second Line",
+        "force_reload": true,
+        "id": "testimonial-contant2"
+      },
+      {
+        "type": "text",
+        "label": "Author Name",
+        "force_reload": true,
+        "id": "testimonial-name"
+      },
+      {
+        "type": "text",
+        "label": "Author post",
+        "force_reload": true,
+        "id": "testimonial-post"
+      },
+      {
+        "type": "text",
+        "label": "Second Testimonial Image",
+        "force_reload": true,
+        "id": "testiimgsecond"
+      },
+      {
+        "type": "text",
+        "label": "Second Testimonial Contant",
+        "force_reload": true,
+        "id": "second-testimonial-contant1"
+      },
+      {
+        "type": "text",
+        "label": "Second Line",
+        "force_reload": true,
+        "id": "second-testimonial-contant2"
+      },
+      {
+        "type": "text",
+        "label": "Author Name",
+        "force_reload": true,
+        "id": "second-testimonial-name"
+      },
+      {
+        "type": "text",
+        "label": "Author post",
+        "force_reload": true,
+        "id": "second-testimonial-post"
+      },
+      {
+        "type": "text",
+        "label": "Third Testimonial Image",
+        "force_reload": true,
+        "id": "testiimgthird"
+      },
+      {
+        "type": "text",
+        "label": "Third Testimonial Contant",
+        "force_reload": true,
+        "id": "third-testimonial-contant1"
+      },
+      {
+        "type": "text",
+        "label": "Second Line",
+        "force_reload": true,
+        "id": "third-testimonial-contant2"
+      },
+      {
+        "type": "text",
+        "label": "Author Name",
+        "force_reload": true,
+        "id": "third-testimonial-name"
+      },
+      {
+        "type": "text",
+        "label": "Author post",
+        "force_reload": true,
+        "id": "third-testimonial-post"
+      },
+      {
+        "type": "text",
+        "label": "Fourth Testimonial Image",
+        "force_reload": true,
+        "id": "testiimgfourth"
+      },
+      {
+        "type": "text",
+        "label": "Fourth Testimonial Contant",
+        "force_reload": true,
+        "id": "fourth-testimonial-contant1"
+      },
+      {
+        "type": "text",
+        "label": "Second Line",
+        "force_reload": true,
+        "id": "fourth-testimonial-contant2"
+      },
+      {
+        "type": "text",
+        "label": "Author Name",
+        "force_reload": true,
+        "id": "fourth-testimonial-name"
+      },
+      {
+        "type": "text",
+        "label": "Author post",
+        "force_reload": true,
+        "id": "fourth-testimonial-post"
+      },
+      {
+        "type": "heading",
+        "content": "Home Page Services"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Home services",
+        "force_reload": true,
+        "id": "home-services"
+      },
+      {
+        "type": "text",
+        "label": "heading 1",
+        "force_reload": true,
+        "id": "service_heading1"
+      },
+      {
+        "type": "text",
+        "label": "text 1",
+        "force_reload": true,
+        "id": "service_text1"
+      },
+      {
+        "type": "text",
+        "label": "heading 2",
+        "force_reload": true,
+        "id": "service_heading2"
+      },
+      {
+        "type": "text",
+        "label": "text 2",
+        "force_reload": true,
+        "id": "service_text2"
+      },
+      {
+        "type": "text",
+        "label": "heading 3",
+        "force_reload": true,
+        "id": "service_heading3"
+      },
+      {
+        "type": "text",
+        "label": "text 3",
+        "force_reload": true,
+        "id": "service_text3"
+      },
+      {
+        "type": "text",
+        "label": "heading 4",
+        "force_reload": true,
+        "id": "service_heading4"
+      },
+      {
+        "type": "text",
+        "label": "text 4",
+        "force_reload": true,
+        "id": "service_text4"
+      },
+      {
+        "type": "heading",
+        "content": "Recent Blogs"
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Home Blog",
+        "force_reload": true,
+        "id": "home-blog"
+      },
+      {
+        "type": "text",
+        "label": "Subheading Text",
+        "force_reload": true,
+        "id": "subheading-new-blog"
+      },
       {
         "type": "heading",
         "content": "i18n.Carousel"
@@ -1003,6 +1473,18 @@
         "content": "i18n.Products"
       },
       {
+        "type": "checkbox",
+        "label": "Show Featured Products",
+        "force_reload": true,
+        "id": "homepage_featured_products_show"
+      },
+      {
+        "type": "text",
+        "label": "Subheading text",
+        "force_reload": true,
+        "id": "subheading-featured-product"
+      },
+      {
         "type": "select",
         "label": "i18n.NumberOfFeaturedProducts",
         "id": "homepage_featured_products_count",
@@ -1063,6 +1545,18 @@
         ]
       },
       {
+        "type": "checkbox",
+        "label": "Show Populer Products",
+        "force_reload": true,
+        "id": "homepage_top_products_show"
+      },
+      {
+        "type": "text",
+        "label": "Subheading text",
+        "force_reload": true,
+        "id": "subheading-top-product"
+      },
+      {
         "type": "select",
         "label": "i18n.NumberOfMostPopularProducts",
         "id": "homepage_top_products_count",
@@ -1121,6 +1615,18 @@
             "label": "12"
           }
         ]
+      },
+      {
+        "type": "checkbox",
+        "label": "Show New Products",
+        "force_reload": true,
+        "id": "homepage_new_products_show"
+      },
+      {
+        "type": "text",
+        "label": "Subheading text",
+        "force_reload": true,
+        "id": "subheading-new-product"
       },
       {
         "type": "select",
@@ -1187,6 +1693,38 @@
   {
     "name": "i18n.Products",
     "settings": [
+      {
+        "type": "color",
+        "label": "Product button background color",
+        "id": "product-button-backgroundColor"
+      },
+      {
+        "type": "color",
+        "label": "Product button background color hover",
+        "id": "product-button-backgroundColorHover"
+      },
+      {
+        "type": "color",
+        "label": "Product button primary color",
+        "id": "product-button--primary-color"
+      },
+      {
+        "type": "color",
+        "label": "Product button primary color hover",
+        "id": "product-button--primary-colorHover"
+      },
+      {
+        "type": "checkbox",
+        "label": "i18n.ShowCardSwatch",
+        "force_reload": true,
+        "id": "show_card_swatch"
+      },
+      {
+        "type": "checkbox",
+        "label": "i18n.BrandName",
+        "force_reload": true,
+        "id": "brand_name"
+      },
       {
         "type": "heading",
         "content": "i18n.ProductSaleBadges"
@@ -1276,13 +1814,6 @@
         "reference_default": "none"
       },
       {
-        "type": "color",
-        "label": "i18n.BadgeHoverColor",
-        "id": "color_hover_product_sale_badges",
-        "reference": "product_sale_badges",
-        "reference_default": "none"
-      },
-      {
         "type": "paragraph",
         "content": "i18n.ForTextureSwatchesMaxDimensions",
         "reference": "product_sale_badges",
@@ -1331,13 +1862,6 @@
         "type": "color",
         "label": "i18n.BadgeColor",
         "id": "color_badge_product_sold_out_badges",
-        "reference": "product_sold_out_badges",
-        "reference_default": "none"
-      },
-      {
-        "type": "color",
-        "label": "i18n.BadgeHoverColor",
-        "id": "color_hover_product_sold_out_badges",
         "reference": "product_sold_out_badges",
         "reference_default": "none"
       },
@@ -1595,6 +2119,18 @@
         ]
       },
       {
+        "type": "checkbox",
+        "label": "Show Related Products",
+        "force_reload": true,
+        "id": "related_products"
+      },
+      {
+        "type": "text",
+        "label": "Subheading text",
+        "force_reload": true,
+        "id": "subheading-related-product"
+      },
+      {
         "type": "select",
         "label": "i18n.ProductPageRelatedProducts",
         "id": "productpage_related_products_count",
@@ -1653,6 +2189,18 @@
             "label": "12"
           }
         ]
+      },
+      {
+        "type": "checkbox",
+        "label": "Show Also Viewed Products",
+        "force_reload": true,
+        "id": "similar_by_views"
+      },
+      {
+        "type": "text",
+        "label": "Subheading text",
+        "force_reload": true,
+        "id": "subheading-similar-product"
       },
       {
         "type": "select",
@@ -2778,6 +3326,197 @@
         "type": "color",
         "label": "i18n.ToasterTextColor",
         "id": "optimizedCheckout-loadingToaster-textColor"
+      }
+    ]
+  },
+  {
+    "name": "i18n.OtherSettings",
+    "settings": [
+      {
+        "type": "heading",
+        "content": "i18n.CalculateFreeShipping"
+      },
+      {
+        "type": "checkbox",
+        "label": "i18n.EnableCalculateFreeShipping",
+        "force_reload": true,
+        "id": "hide_calculate_free_shipping"
+      },
+      {
+        "type": "text",
+        "label": "i18n.CalcShippingRequires",
+        "force_reload": true,
+        "id": "calc_shipping_requires",
+        "reference": "hide_calculate_free_shipping",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.CalcShippingMatch",
+        "force_reload": true,
+        "id": "calc_shipping_match",
+        "reference": "hide_calculate_free_shipping",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.CalcShippingRemaining",
+        "force_reload": true,
+        "id": "calc_shipping_remaining",
+        "reference": "hide_calculate_free_shipping",
+        "reference_default": false
+      },
+      {
+        "type": "heading",
+        "content": "i18n.RecentlyBoughtPopup"
+      },
+      {
+        "type": "checkbox",
+        "label": "i18n.EnableRecentlyBoughtPopup",
+        "force_reload": true,
+        "id": "enable_recently_bougth_popup"
+      },
+      {
+        "type": "checkbox",
+        "label": "i18n.EnableRecentlyBoughtPopupMobile",
+        "force_reload": true,
+        "id": "enable_recently_bougth_popup_mobile",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpText",
+        "force_reload": true,
+        "id": "rb_popup_text",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpInfo",
+        "force_reload": true,
+        "id": "rb_popup_info",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpHours",
+        "force_reload": true,
+        "id": "rb_popup_hours",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpProductIds",
+        "force_reload": true,
+        "id": "rb_popup_productid",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpCityCountry1",
+        "force_reload": true,
+        "id": "rb_popup_city_country_1",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpCityCountry2",
+        "force_reload": true,
+        "id": "rb_popup_city_country_2",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpCityCountry3",
+        "force_reload": true,
+        "id": "rb_popup_city_country_3",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpCityCountry4",
+        "force_reload": true,
+        "id": "rb_popup_city_country_4",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpCityCountry5",
+        "force_reload": true,
+        "id": "rb_popup_city_country_5",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpCityCountry6",
+        "force_reload": true,
+        "id": "rb_popup_city_country_6",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpCityCountry7",
+        "force_reload": true,
+        "id": "rb_popup_city_country_7",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpCityCountry8",
+        "force_reload": true,
+        "id": "rb_popup_city_country_8",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpCityCountry9",
+        "force_reload": true,
+        "id": "rb_popup_city_country_9",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "text",
+        "label": "i18n.RbpCityCountry10",
+        "force_reload": true,
+        "id": "rb_popup_city_country_10",
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false
+      },
+      {
+        "type": "select",
+        "label": "i18n.RbpProductSwitch",
+        "id": "rbp_product_switch",
+        "force_reload": true,
+        "reference": "enable_recently_bougth_popup",
+        "reference_default": false,
+        "options": [
+          {
+            "value": 10,
+            "label": "10"
+          },
+          {
+            "value": 20,
+            "label": "20"
+          },
+          {
+            "value": 30,
+            "label": "30"
+          }
+        ]
       }
     ]
   },

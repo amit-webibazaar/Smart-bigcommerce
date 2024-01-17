@@ -19,19 +19,14 @@
 
 .address {
     display: inline-block;
-    padding: 0 spacing("half");
     vertical-align: top;
     width: 100%;
 
-    @include breakpoint("small") {
-        width: grid-calc(6, $total-columns);
-    }
-
-    @include breakpoint("large") {
-        width: grid-calc(4, $total-columns);
-    }
 }
-
+ .addre-detai {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
 
 // Address
 // -----------------------------------------------------------------------------
@@ -43,7 +38,6 @@
 //    consistently in line. We need to adjust padding to accommodate this.
 //
 // -----------------------------------------------------------------------------
-
 .panel--address {
     font-size: fontSize("base"); // 1
     position: relative;
@@ -51,9 +45,12 @@
     .panel-body {
         min-height: remCalc(250px); // 2
         padding: spacing("single");
+        border-radius: 8px;
+        background-color: transparent!important;
+        border: container("border");
 
         @include breakpoint("small") {
-            padding: spacing("single") spacing("single") (spacing("single") + spacing("double")); // 3
+            padding: 1.5rem 1.5rem 3.5rem;; // 3
         }
     }
 
@@ -90,7 +87,7 @@
 
 .address-details {
     list-style: none;
-    margin: 0 0 spacing("half");
+    margin: 3px 0px;
 }
 
 .address-details--postal {
@@ -120,12 +117,9 @@
         }
     }
 
-    .panel-body {
-        background-color: transparent;
-        border: container("border");
+    .panel-body{
         display: block;
     }
-
     .address-title {
         margin-bottom: 0;
         transition: all 0.15s ease;

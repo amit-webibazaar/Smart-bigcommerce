@@ -1,0 +1,105 @@
+{{#if theme_settings.homepage_category_show}}
+    <div class="section-spacing">
+        <div class="cate-bg container">
+            <div class="category-head myheadeing">
+                <h2 class="page-heading">
+                {{lang 'common.cate' }}
+                <p>{{theme_settings.subheading-category}}</p>
+                <span class="head-line"></span>
+                </h2>
+            </div>
+            <div class="homecategory row cate-row pre-row">
+                <div class="all-cate caro-btn topsp col-12 pre-col all-head-contant">
+                        <div class="homecate">
+                            <section class="productCarousel home_category"
+                                data-list-name="{{list}}"
+                                data-slick='{
+                                "infinite": false,
+                                "mobileFirst": true,
+                                "dots": false,
+                                "slidesToShow": 5,
+                                "slidesToScroll": 2,
+                                "prevArrow": "{{#if customArrowClass}}.{{customArrowClass}}{{/if}}.js-product-prev-arrow-cate",
+                                "nextArrow": "{{#if customArrowClass}}.{{customArrowClass}}{{/if}}.js-product-next-arrow-cate",
+                                "responsive": [
+                                    {
+                                        "breakpoint": 1409,
+                                        "settings": {
+                                            "slidesToShow": 5,
+                                            "slidesToScroll": 2
+                                        }
+                                    },
+                                    {
+                                        "breakpoint": 1200,
+                                        "settings": {
+                                            "slidesToShow": 4,
+                                            "slidesToScroll": 2
+                                        }
+                                    },
+                                    {
+                                        "breakpoint": 991,
+                                        "settings": {
+                                            "slidesToShow": 3,
+                                            "slidesToScroll": 2
+                                        }
+                                    },
+                                    {
+                                        "breakpoint": 767,
+                                        "settings": {
+                                            "slidesToShow": 3,
+                                            "slidesToScroll": 1
+                                        }
+                                    },
+                                    {
+                                        "breakpoint": 575,
+                                        "settings": {
+                                            "slidesToShow": 3,
+                                            "slidesToScroll": 1
+                                        }
+                                    },
+                                    {
+                                        "breakpoint": 419,
+                                        "settings": {
+                                            "slidesToShow": 2,
+                                            "slidesToScroll": 1
+                                        }
+                                    },
+                                    {
+                                        "breakpoint": 0,
+                                        "settings": {
+                                            "slidesToShow": 1,
+                                            "slidesToScroll": 1
+                                        }
+                                    }
+                                ]
+                                }'
+                                > 
+                                {{#each categories }}
+                                    <div data-product-slide class="home-cate-item col-12 pre-col productCarousel-slide new-productt js-product-slide">
+                                        <div class="catebg">
+                                            <div class="cate-img">
+                                                <a class="" href="{{url}}"><img src="{{getImage image}}" alt="Category-image" width="800px" height="800px"></a>
+                                                <div class="cate-ti">
+                                                    <a class="catename" href="{{url}}">{{name}}</a>
+                                                    <p>{{count}}<span>{{lang 'items'}}</span></p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        
+                                    </div>
+                                {{/each}}
+                            </section>
+                            <div class="all-btn new-productt">
+                                
+                                <button aria-label="{{lang 'carousel.arrowAriaLabel'}} {{products.length}}" class="{{#if customArrowClass}}{{customArrowClass}} {{/if}}js-product-prev-arrow-cate slick-prev slick-arrow"><svg width="38px" height="26px"><use xlink:href="#arrow-left"></use></svg></button>
+                                
+                                <button aria-label="{{lang 'carousel.arrowAriaLabel'}} {{products.length}}" class="{{#if customArrowClass}}{{customArrowClass}} {{/if}}js-product-next-arrow-cate slick-next slick-arrow"><svg width="38px" height="26px"><use xlink:href="#arrow-right"></use></svg></button>
+                                
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/if}}

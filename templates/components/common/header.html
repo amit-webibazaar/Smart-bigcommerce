@@ -10,25 +10,201 @@
     {{/each}}
 </div>
 {{/if}}
-<header class="header" role="banner">
+{{#if theme_settings.homepage_announcement_bar_show}}
+    <div class="top-bar" id="header_banner">
+        <button id="closeButton"><span>X</span></button> 
+      <div class="container section-gap announcementbar" >
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="header_bar">
+                    
+                    <div class="topBarPromotion-carousel"
+                    data-slick='{
+                        "dots": false,
+                        "arrows": false,
+                        "infinite": true,
+                        "mobileFirst": true,
+                        "vertical": true,
+                        "autoplay": true,
+                        "slidesToShow": 1,
+                        "slidesToScroll": 1,
+                        "responsive": [
+                            {
+                                "breakpoint": 768,
+                                "settings": {
+                                    "arrows": false
+                                }
+                            }
+                        ]
+                    }'
+                >       
+                        <div class="top-bar-f" aria-hidden="true">
+                            <a href="{{theme_settings.top_text_link}}" title="offer">{{theme_settings.top_text}}</a>         
+                        </div>
+                        <div class="top-bar-f" aria-hidden="true">
+                            <a href="{{theme_settings.top_text_link2}}" title="offer">{{theme_settings.top_text2}}</a>              
+                        </div>
+                </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+{{/if}}
+
+{{#if theme_settings.theme_electronics}}
+<header class="header header-top" role="banner">    
     <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
         <span class="mobileMenu-toggleIcon">Toggle menu</span>
     </a>
-    {{> components/common/navigation}}
-
-    {{#if page_type '===' 'default'}}
-        <h1 class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
-        </h1>
-    {{else}}
-        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
-            {{> components/common/store-logo}}
+    <div class="container  mycustom-header">
+        <div class="row header-logo--{{theme_settings.logo-position}}">
+            <div class="{{#if theme_settings.logo-position '===' 'center'}}col-lg-4{{else}}col-lg-2{{/if}} col-md-4 col-sm-6 col-xs-6" id="logo">
+                 {{#if page_type '===' 'default'}}
+                    <h1 class="header-logo ">
+                        {{> components/common/store-logo}} 
+                    </h1>
+                {{else}}
+                    <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+                        {{> components/common/store-logo}}
+                    </div>
+                {{/if}}
+            </div>
+            <div class="{{#if theme_settings.logo-position '===' 'center'}}col-lg-4{{else}}col-lg-6{{/if}} col-md-4 col-sm-4 header-quick-search">
+                  
+                    {{> components/common/quick-search}}
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 head-icons">
+                {{> components/common/navigation}}
+            </div>
         </div>
-    {{/if}}
-    <div class="navPages-container" id="menu" data-menu>
-        {{> components/common/navigation-menu}}
+        
+        <div class="">
+            <div class="cate-nav"></div>
+        </div>
     </div>
-    {{{region name="header_navigation_bottom--global"}}}
+    <div class="catcushead">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-2 head-contact">
+                    {{#if settings.phone_number}}
+                        <strong class="foot-phone"><span><svg width="20px" height="18px"><use xlink:href="#call-icon"></use></svg></span>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
+                    {{/if}}
+                </div> -->
+                <div class="col-12 cate-navlg">
+                    <div class="menusidebar-heading sidenav navPages-container" id="menu" data-menu>
+                        <div class="topmenuwithclose">
+                            <h5>{{lang 'Categories'}}</h5>
+                            <!-- <button onclick="closeNav()">X</button> -->
+                        </div>
+                        {{> components/common/navigation-menu}}
+                    </div>
+                    {{{region name="header_navigation_bottom--global"}}}
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
+{{else}} 
+ {{#if theme_settings.theme_health}}
+
+    <header class="header header-top" role="banner">    
+        <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+            <span class="mobileMenu-toggleIcon">Toggle menu</span>
+        </a>
+        <div class="container  mycustom-header">
+            <div class="row header-logo--{{theme_settings.logo-position}}">
+                <div class="{{#if theme_settings.logo-position '===' 'center'}}col-lg-4{{else}}col-lg-2{{/if}} col-md-4 col-sm-6 col-xs-6" id="logo">
+                     {{#if page_type '===' 'default'}}
+                        <h1 class="header-logo ">
+                            {{> components/common/store-logo}} 
+                        </h1>
+                    {{else}}
+                        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+                            {{> components/common/store-logo}}
+                        </div>
+                    {{/if}}
+                </div>
+                <div class="{{#if theme_settings.logo-position '===' 'center'}}col-lg-4{{else}}col-lg-6{{/if}} col-md-4 col-sm-4 header-quick-search">
+                      
+                        {{> components/common/quick-search}}
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 head-icons">
+                    {{> components/common/navigation}}
+                </div>
+            </div>
+            
+            <div class="">
+                <div class="cate-nav"></div>
+            </div>
+        </div>
+        <div class="catcushead">
+            <div class="container">
+                <div class="row">
+                    <!-- <div class="col-2 head-contact">
+                        {{#if settings.phone_number}}
+                            <strong class="foot-phone"><span><svg width="20px" height="18px"><use xlink:href="#call-icon"></use></svg></span>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
+                        {{/if}}
+                    </div> -->
+                    <div class="col-12 cate-navlg">
+                        <div class="menusidebar-heading sidenav navPages-container" id="menu" data-menu>
+                            <div class="topmenuwithclose">
+                                <h5>{{lang 'Categories'}}</h5>
+                                <!-- <button onclick="closeNav()">X</button> -->
+                            </div>
+                            {{> components/common/navigation-menu}}
+                        </div>
+                        {{{region name="header_navigation_bottom--global"}}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{{else}}
+{{#if theme_settings.theme_sports}}
+    <header class="header header-top theme_sport_header" role="banner">    
+        <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+            <span class="mobileMenu-toggleIcon">Toggle menu</span>
+        </a>
+        <div class="container  mycustom-header">
+            <div class="row header-logo--{{theme_settings.logo-position}}">
+                <div class="{{#if theme_settings.logo-position '===' 'center'}}col-lg-4{{else}}col-lg-2{{/if}} col-md-4 col-sm-6 col-xs-6" id="logo">
+                     {{#if page_type '===' 'default'}}
+                        <h1 class="header-logo ">
+                            {{> components/common/store-logo}} 
+                        </h1>
+                    {{else}}
+                        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+                            {{> components/common/store-logo}}
+                        </div>
+                    {{/if}}
+                </div>
+                <div class="{{#if theme_settings.logo-position '===' 'center'}}col-lg-4{{else}}col-lg-6{{/if}} col-md-4 col-sm-4 header-quick-search">
+                    <div class="menusidebar-heading sidenav navPages-container" id="menu" data-menu>
+                            <div class="topmenuwithclose">
+                                <h5>{{lang 'Categories'}}</h5>
+                                <!-- <button onclick="closeNav()">X</button> -->
+                            </div>
+                            {{> components/common/navigation-menu}}
+                        </div>
+                        {{{region name="header_navigation_bottom--global"}}}
+                    
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 head-icons">
+                    {{> components/common/navigation}}
+                </div>
+            </div>
+            
+            <div class="">
+                <div class="cate-nav"></div>
+            </div>
+        </div>
+    </header>
+{{/if}}
+{{/if}}
+{{/if}}
+<div id="header_placeholder"></div>
+
+
 {{{region name="header_bottom--global"}}}
 {{{region name="header_bottom"}}}

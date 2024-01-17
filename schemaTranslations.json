@@ -197,6 +197,24 @@
     "ko": "본문 텍스트 글꼴 모음",
     "pl": "Rodzina czcionek tekstu głównego"
   },
+  "i18n.Lato": {
+    "default": "Lato",
+    "fr": "Lato",
+    "it": "Lato",
+    "zh": "Lato",
+    "de": "Lato",
+    "es": "Lato",
+    "nl": "Lato",
+    "pt": "Lato",
+    "pt-BR": "Lato",
+    "sv": "Lato",
+    "es-MX": "Lato",
+    "es-419": "Lato",
+    "da": "Lato",
+    "no": "Lato",
+    "ko": "Lato",
+    "pl": "Lato"
+  },
   "i18n.Karla": {
     "default": "Karla",
     "fr": "Karla",
@@ -2609,6 +2627,12 @@
     "ko": "최신상품 수",
     "pl": "Liczba nowych produktów"
   },
+  "i18n.ShowCardSwatch": {
+    "default": "Show Card Swatch"
+  },
+  "i18n.BrandName": {
+    "default": "Show Card Brand Name"
+  },
   "i18n.ProductSaleBadges": {
     "default": "Product sale badges",
     "fr": "Badges de produit remisé",
@@ -2678,8 +2702,7 @@
     "es-419": "Parte superior izquierda",
     "da": "Øverst til venstre",
     "no": "Øverst til venstre",
-    "ko": "왼쪽 상단",
-    "pl": "Na górze po lewej"
+    "ko": "왼쪽 상단"
   },
   "i18n.Diagonal": {
     "default": "Diagonal",
@@ -2696,8 +2719,7 @@
     "es-419": "Diagonal",
     "da": "Diagonal",
     "no": "Diagonal",
-    "ko": "대각선",
-    "pl": "Przekątna"
+    "ko": "대각선"
   },
   "i18n.Burst": {
     "default": "Burst",
@@ -2714,8 +2736,7 @@
     "es-419": "Ráfaga",
     "da": "Burst",
     "no": "Burst",
-    "ko": "버스트",
-    "pl": "Burst"
+    "ko": "버스트"
   },
   "i18n.ProductSaleBadgeLabel": {
     "default": "Product sale badge label",
@@ -2878,24 +2899,6 @@
     "no": "Merkets farge",
     "ko": "배지 색상",
     "pl": "Kolor odznaki"
-  },
-  "i18n.BadgeHoverColor": {
-    "default": "Badge hover color",
-    "fr": "Couleur du badge au survol",
-    "it": "Colore badge al passaggio del mouse",
-    "zh": "徽章悬停颜色",
-    "de": "Badge-Hover-Farbe",
-    "es": "Color de la insignia al pasar el cursor",
-    "nl": "Aanwijskleur badge",
-    "pt": "Cor do texto do símbolo com o foco do mouse",
-    "pt-BR": "Cor do texto do símbolo com o foco do mouse",
-    "sv": "Märkets färg när muspekaren hålls över det",
-    "es-MX": "Color del cursos de la insignia",
-    "es-419": "Color del cursos de la insignia",
-    "da": "Farve, når der peges på badge",
-    "no": "Merkets farge (med peker over)",
-    "ko": "배지 호버 색상",
-    "pl": "Kolor zawieszki odznaki"
   },
   "i18n.ForTextureSwatchesMaxDimensions": {
     "default": "*For texture swatches, max dimensions are 150x150.",
@@ -6082,5 +6085,77 @@
     "no": "Bolt",
     "ko": "Bolt",
     "pl": "Bolt"
+  },
+  "i18n.OtherSettings": {
+    "default": "Other Settings"
+  },
+  "i18n.CalculateFreeShipping": {
+    "default": "Calculate Free Shipping"
+  },
+   "i18n.EnableCalculateFreeShipping": {
+    "default": "Enable Calculate Free Shipping"
+  },
+  "i18n.CalcShippingRequires": {
+    "default": "'Requires' Amount (Only Integer Value )"
+  },
+  "i18n.CalcShippingMatch": {
+    "default": "'Match' Message"
+  },
+  "i18n.CalcShippingRemaining": {
+    "default": "'Remaining' Message"
+  },
+  "i18n.RecentlyBoughtPopup": {
+    "default": "Recently Bought Popup"
+  },
+  "i18n.EnableRecentlyBoughtPopup": {
+    "default": "Enable Bought Viewed Popup"
+  },
+  "i18n.EnableRecentlyBoughtPopupMobile": {
+    "default": "Enable Bought Viewed Popup (Mobile)"
+  },
+  "i18n.RbpText": {
+    "default": "Text"
+  },
+  "i18n.RbpInfo": {
+    "default": "Info"
+  },
+  "i18n.RbpHours": {
+    "default": "Hours"
+  },
+  "i18n.RbpProductIds": {
+    "default": "Product Ids"
+  },
+  "i18n.RbpCityCountry1": {
+    "default": "City - Country 1"
+  },
+  "i18n.RbpCityCountry2": {
+    "default": "City - Country 2"
+  },
+  "i18n.RbpCityCountry3": {
+    "default": "City - Country 3"
+  },
+  "i18n.RbpCityCountry4": {
+    "default": "City - Country 4"
+  },
+  "i18n.RbpCityCountry5": {
+    "default": "City - Country 5"
+  },
+  "i18n.RbpCityCountry6": {
+    "default": "City - Country 6"
+  },
+  "i18n.RbpCityCountry7": {
+    "default": "City - Country 7"
+  },
+  "i18n.RbpCityCountry8": {
+    "default": "City - Country 8"
+  },
+  "i18n.RbpCityCountry9": {
+    "default": "City - Country 9"
+  },
+  "i18n.RbpCityCountry10": {
+    "default": "City - Country 10"
+  },
+  "i18n.RbpProductSwitch": {
+    "default": "Switch After (S)"
   }
 }

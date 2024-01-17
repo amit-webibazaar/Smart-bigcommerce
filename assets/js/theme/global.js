@@ -13,10 +13,12 @@ import cartPreview from './global/cart-preview';
 import privacyCookieNotification from './global/cookieNotification';
 import carousel from './common/carousel';
 import svgInjector from './global/svg-injector';
+import productOptionGraphql from './set-product-option-with-graphql';
+import customJS from './custom';
 
 export default class Global extends PageManager {
     onReady() {
-        const { cartId, secureBaseUrl } = this.context;
+        const { show_card_swatch, cartId, secureBaseUrl } = this.context;
         cartPreview(secureBaseUrl, cartId);
         quickSearch();
         currencySelector(cartId);
@@ -27,5 +29,9 @@ export default class Global extends PageManager {
         mobileMenuToggle();
         privacyCookieNotification();
         svgInjector();
+        customJS(this.context);
+        if(show_card_swatch){
+            productOptionGraphql(this.context);
+        }
     }
 }

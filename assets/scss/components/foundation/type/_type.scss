@@ -34,12 +34,28 @@ cite {
     line-height: $blockquote-cite-lineHeight;
     margin: $blockquote-cite-margin;
 }
-
+.default .page-heading, .product .page-heading{
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
 .page-heading {
-    margin: 0 0 spacing("double");
+    margin: 30px 0px;
+    text-align: left;
+    font-size: 34px;
+    color: stencilColor("color-textBase");
+    text-transform: capitalize;
+}
+.myheadeing{
     text-align: center;
 }
-
+.myheadeing p{
+    font-size: 14px;
+    color: stencilColor("color-primaryDark");
+    font-weight: 400;
+    margin: 0;
+}
 h1 {
     font-size: $h1-font-size;
 }
@@ -77,4 +93,56 @@ h6 {
 
 .definitionList-value {
     margin: 0;
+}
+@media(min-width: 992px) and (max-width: 1199px){
+    .page-heading {
+        font-size: 24px!important;
+    }
+}
+
+@media(max-width: 1409px){
+    .page-heading{
+        font-size: 34px;
+    }
+}
+@media(max-width: 991px){
+    .page-heading {
+        font-size: 22px;
+    }
+    .myheadeing p{
+        font-size: 14px;
+    }
+}
+@media(max-width: 800px){
+    .page-heading {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media(max-width: 767px){
+    .default .page-heading{
+        margin-top: 0;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    .page-heading{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .myheadeing p{
+        margin: 0;
+    }
+    .myheadeing{
+        padding: 0px 0px 15px 0;
+    }
+}
+@media(max-width: 575px){
+    .default .page-heading, .product .page-heading{
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    .myheadeing{
+        padding: 0px 0px 10px 0;
+    }
 }

@@ -1,35 +1,90 @@
 <section class="productCarousel"
     data-list-name="{{list}}"
+    tabindex="0"
     data-slick='{
         "infinite": false,
         "mobileFirst": true,
-        "slidesToShow": 2,
+        "dots": false,
+        "slidesToShow": 1,
         "slidesToScroll": 2,
-        "slide": "[data-product-slide]",
+        "slide": ".js-product-slide",
+        "prevArrow": "{{#if customArrowClass}}.{{customArrowClass}}{{/if}}.js-product-prev-arrow-new",
+        "nextArrow": "{{#if customArrowClass}}.{{customArrowClass}}{{/if}}.js-product-next-arrow-new",
         "responsive": [
             {
-                "breakpoint": 800,
+                "breakpoint": 1409,
                 "settings": {
-                    "slidesToShow": {{ columns }},
-                    "slidesToScroll": {{ columns }}
+                    "slidesToShow": 5,
+                    "slidesToScroll": 1
                 }
             },
             {
-                "breakpoint": 550,
+                "breakpoint": 1200,
+                "settings": {
+                    "slidesToShow": 4,
+                    "slidesToScroll": 1
+                }
+            },
+            {
+                "breakpoint": 991,
+                "settings": {
+                    "slidesToShow": 4,
+                    "slidesToScroll": 1
+                }
+            },
+            {
+                "breakpoint": 801,
+                "settings": {
+                    "slidesToShow": 4,
+                    "slidesToScroll": 1
+                }
+            },
+            {
+                "breakpoint": 767,
                 "settings": {
                     "slidesToShow": 3,
-                    "slidesToScroll": 3
+                    "slidesToScroll": 1
+                }
+            },
+            {
+                "breakpoint": 601,
+                "settings": {
+                    "slidesToShow": 3,
+                    "slidesToScroll": 1
+                }
+            },
+            {
+                "breakpoint": 375,
+                "settings": {
+                    "slidesToShow": 2,
+                    "slidesToScroll": 1
+                }
+            },
+            {
+                "breakpoint": 0,
+                "settings": {
+                    "slidesToShow": 2,
+                    "slidesToScroll": 1
                 }
             }
         ]
     }'
 >
     {{#each products}}
-    <div data-product-slide class="productCarousel-slide">
-        {{> components/products/card settings=../settings theme_settings=../theme_settings customer=../customer event="list" position=(add @index 1)}}
+    <div data-product-slide class="productCarousel-slide new-productt js-product-slide">
+        {{> components/products/card show_compare=1 settings=../settings theme_settings=../theme_settings customer=../customer event="list" position=(add @index 1)}}
     </div>
     {{/each}}
     {{#if products.length '>' 1}}
         {{> components/carousel-content-announcement}}
     {{/if}}
 </section>
+
+<div class="all-btn new-productt">
+    {{#if products.length '>' 1}}
+    <button aria-label="{{lang 'carousel.arrowAriaLabel'}} {{products.length}}" class="{{#if customArrowClass}}{{customArrowClass}} {{/if}}js-product-prev-arrow-new slick-prev slick-arrow"><svg width="38px" height="26px"><use xlink:href="#arrow-left"></use></svg></button>
+    {{/if}}
+    {{#if products.length '>' 1}}
+    <button aria-label="{{lang 'carousel.arrowAriaLabel'}} {{products.length}}" class="{{#if customArrowClass}}{{customArrowClass}} {{/if}}js-product-next-arrow-new slick-next slick-arrow"><svg width="38px" height="26px"><use xlink:href="#arrow-right"></use></svg></button>
+    {{/if}}
+</div>

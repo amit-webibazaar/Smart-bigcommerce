@@ -7,9 +7,10 @@
         "title": "Footer Start",
         "brands": "Popular Brands",
         "navigate": "Navigate",
-        "info": "Info",
+        "info": "Contect Us",
+        "about": "about us",
         "categories": "Categories",
-        "call_us": "Call us at {phone_number}",
+        "call_us": "{phone_number}",
         "powered_by": "Powered by"
     },
     "home": {
@@ -37,7 +38,7 @@
         "title": "Checkout"
     },
     "cart": {
-        "nav_aria_label": "Cart with 0 items",
+        "nav_aria_label": "My Cart",
         "continue_shopping": "Click here to continue shopping",
         "login_to_checkout": "Login to proceed to checkout",
         "items": "{NUM, plural, =0{(0 items)} one {(# item)} other {(# items)}}",
@@ -62,7 +63,7 @@
             "update": "Update shipping cost"
         },
         "preview": {
-            "checkout_now": "Check out now",
+            "checkout_now": "Check out",
             "checkout_multiple": "or check out with multiple addresses",
             "view_cart": "View Cart"
         },
@@ -139,13 +140,13 @@
         "store_credit": "You have <strong>{store_credit}</strong> of store credit. To use it, simply place your order and you will be able to choose store credit as the payment method when it comes time to pay for your order.",
         "store_credit_overview": "{credit} Store Credit",
         "generic_error": "Oops! Something went wrong.",
-        "currency": "Select Currency: {code}",
+        "currency": "{code}",
         "currency_switch_promotion" : "Promotions and gift certificates that don't apply to the new currency will be removed from your cart. Are you sure you want to continue?",
         "newsletter_signup": "Register for our newsletter",
         "form_submit": "Submit",
         "no_preference": "No Preference",
         "other_details": "Other Details",
-        "required": "Required",
+        "required": "*",
         "optional": "Optional",
         "email_address": "Email Address",
         "edit": "Edit",
@@ -159,6 +160,7 @@
         "close": "Close",
         "or": "or",
         "and": "and",
+        "cate": "Shop by collections",
         "compare": "Compare",
         "change": "Change",
         "sign_up": "Register",
@@ -166,7 +168,9 @@
         "login_for_pricing": "Log in for pricing",
         "logout": "Sign out",
         "account": "Account",
-        "cart": "Cart",
+        "cart": "My cart",
+        "cart_item": "Item",
+        "wishlist": "Wishlist",
         "search": "Search",
         "gift_cert": "Gift Certificates",
         "save": "Save",
@@ -833,7 +837,7 @@
         "comments": "Comments"
     },
     "newsletter": {
-        "subscribe": "Subscribe to our newsletter",
+        "subscribe": "Subscribe to our email",
         "subscribe_intro": "Get the latest updates on new products and upcoming sales",
         "subscribe_submit": "Subscribe",
         "email_placeholder": "Your email address",

@@ -2,12 +2,15 @@
 // ACTION BAR (CSS)
 // =============================================================================
 
+.actionBar {
+    margin: 0;
+}
 
 .actionBar-section {
     .form-field {
         background-color: $input-bg-color;
-        border: $actionBar-form-field-border;
-        border-radius: $actionBar-form-field-radius;
+        border: 1px solid #eeeeee;
+        border-radius: 8px;
 
         &:hover {
             border-color: stencilColor("input-border-color-active");
@@ -19,7 +22,7 @@
         font-size: $actionBar-form-label-fontSize;
         line-height: $actionBar-form-label-lineHeight;
         margin-bottom: 0;
-        padding-left: $actionBar-form-label-padding;
+        padding-left: 10px;
     }
 
     .form-input,
@@ -38,5 +41,10 @@
     .form-select {
         color: stencilColor("color-textLink");
         height: $input-small-height - remCalc($input-border-width * 2);
+    }
+}
+@media (min-width: 551px){
+    .actionBar-section {
+        float: right;
     }
 }

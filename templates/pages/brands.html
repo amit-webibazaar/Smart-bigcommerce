@@ -3,15 +3,14 @@ brands:
 ---
 
 {{#partial "page"}}
-
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-
+<div class="container brands">
 <section class="page">
     <h1 class="page-heading">{{lang 'brand.label'}}</h1>
     {{{region name="brands_below_header"}}}
     <ul class="brandGrid">
         {{#each brands}}
-            <li class="brand">
+            <li class="brand col-lg-2 col-md-3 col-sm-4 col-6">
                 <article class="card {{#if alternate}}card--alternate{{/if}}">
                     <figure class="card-figure">
                         <a class="card-figure__link" aria-label="{{name}}" href="{{url}}">
@@ -27,9 +26,9 @@ brands:
                         </a>
                     </figure>
                     <div class="card-body">
-                        <h3 class="card-title">
+                        <h2 class="card-title">
                             <a href="{{url}}">{{name}}</a>
-                        </h3>
+                        </h2>
                     </div>
                 </article>
             </li>
@@ -38,5 +37,6 @@ brands:
     {{> components/common/paginator pagination.brands}}
     {{{region name="brands_below_content"}}}
 </section>
+</div>
 {{/partial}}
 {{> layout/base}}

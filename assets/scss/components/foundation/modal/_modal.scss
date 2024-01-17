@@ -4,16 +4,21 @@
 // // 1. Fix for content shifted to top in modal window when bottom variant option selected
 // // 2. Icon styles and icon animations moved from the removed "sweetalert2" library
 // =============================================================================
-
+.modal-background{
+    z-index: 999999;
+}
 .modal {
+    background-color: stencilColor("secondary-background-color");
     left: 50%;
     margin: 0;
+    border-radius: 10px;
     max-height: 90%;
     max-width: 95%;
     min-height: 240px;
     outline: none;
     overflow: hidden;
     padding: 0;
+    z-index: 999999;
     top: 50% !important;
     transform: translate(-50%, -50%);
 
@@ -216,5 +221,10 @@
         margin-top: 0;
         opacity: 1;
         transform: scale(1);
+    }
+}
+@media(max-width: 575px){
+    .modal-body{
+        padding: 1.25rem 0.25rem;
     }
 }

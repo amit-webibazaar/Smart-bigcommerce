@@ -1,0 +1,19 @@
+{{#if theme_settings.home-blog}}
+{{{region name="home_above_blog"}}}
+<div class="section-spacing">
+    <div class="next-prevb allblog-bg">
+        <div class="container">
+            <div class="topsp">
+                <div class="myheadeing">
+                    <h2 class="page-heading">{{ lang 'blog.recent_posts' }}
+                        <p>{{theme_settings.subheading-new-blog}}</p>
+                        <span class="head-line"></span>
+                    </h2>
+                    {{#if blog.length '>' theme_setting.homepage_blog_posts_count}}<h3>view all</h3>{{/if}}
+                </div>
+                    {{> components/blog/carousel blog=blog}}
+            </div>
+        </div>
+    </div>
+</div>
+{{/if}}

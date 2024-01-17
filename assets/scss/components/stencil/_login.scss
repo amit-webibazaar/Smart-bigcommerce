@@ -2,18 +2,23 @@
 // LOGIN (CSS)
 // =============================================================================
 
-.login {
-    margin: spacing("double") auto spacing("double")*2;
-    max-width: remCalc(900px);
+.new-customer .panel-header{
+    background-color: stencilColor("color-white");
+    margin-bottom: 0;
+    border-radius: 8px 8px 0px 0px;
 }
-
+.new-customer .panel-body{
+    background-color: stencilColor("color-white");
+    margin-bottom: 0;
+    border-radius: 0px 0px 8px 8px;
+}
 .login-row {
     @include grid-row();
-    @include breakpoint("medium") {
-        margin-top: spacing("double")*2;
-    }
+    max-width: unset;
 }
-
+.login-row .form-actions .button,.login-row .form-actions .forgot-password{
+    vertical-align: middle;
+}
 .login-form {
     @include grid-column(12);
 
@@ -36,9 +41,28 @@
 }
 
 .new-customer-fact-list {
-    margin-left: spacing("double");
+    margin-left: 2rem;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .new-customer-fact {
     padding-left: spacing("half");
+    line-height: 25px;
+}
+.login-form{
+    background: stencilColor("color-white");
+    border-radius: 10px;
+    padding: 40px 15px;
+    margin: 0;
+}
+@media(max-width: 800px){
+    .login-form{
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+    .new-customer{
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
 }
