@@ -1,9 +1,27 @@
-<h2 class="page-heading">{{lang 'products.top' }}</h2>
+{{#if theme_settings.homepage_top_products_show}}
+<div class="section-spacing">
+    <div class="top-products">
+        <div class="container new-pro">
+            <div class="all-head myheadeing">
+                <h2 class="page-heading">
+                    {{lang 'products.top' }}
+                    <p>{{theme_settings.subheading-top-product}}</p>
+                    <span class="head-line"></span>
+                </h2>
+            </div>
+                {{#if settings.data_tag_enabled}}
+                {{> components/products/top-carousel products=products show_compare=products.show_compare list="top Products"}}
+            {{else}}
+                {{> components/products/top-carousel products=products show_compare=products.show_compare}}
+            {{/if}}
+        </div>
+    </div>
+</div>
+{{/if}}
 
-<ul class="productGrid productGrid--maxCol{{ columns }}" data-product-type="top_sellers" data-list-name="Most Popular Products">
-{{#each products}}
-<li class="product">
-    {{>components/products/card settings=../settings theme_settings=../theme_settings customer=../customer event="list" position=(add @index 1)}}
-</li>
-{{/each}}
-</ul>
+
+
+
+
+
+

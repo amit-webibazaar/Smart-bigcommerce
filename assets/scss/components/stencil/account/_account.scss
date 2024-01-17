@@ -7,7 +7,6 @@
 // -----------------------------------------------------------------------------
 
 .navBar--account {
-    display: none;
 
     @include breakpoint("medium") {
         display: block;
@@ -20,8 +19,8 @@
 
 .account-heading {
     border-bottom: container("border");
-    margin: 0;
-    padding-bottom: spacing("base");
+    margin: 0 0 1rem 0;
+    padding: 0 0 1rem 0;
 }
 
 
@@ -33,9 +32,12 @@
     margin-left: 0;
 }
 
+.account_inbox .account-listItem{
+    padding: 1.5rem 0 1.5rem 0px;
+}
 .account-listItem {
     border-bottom: container("border");
-    padding: spacing("single") 0;
+    padding: 1.5rem 0 1.5rem 35px;
     position: relative;
 
     img {
@@ -255,7 +257,7 @@
 .account-orderTotal {
     float: right;
     font-size: fontSize("smaller");
-    margin-top: -(spacing("single"));
+    margin-top: 0;
     width: grid-calc(8, $total-columns);
 }
 
@@ -266,9 +268,9 @@
 }
 
 .account-orderTotal-key {
-    color: stencilColor("color-textSecondary");
+    color: stencilColor("color-textbase");
     float: left;
-    font-weight: fontWeight("normal");
+    font-weight: 600;
 
     &:last-of-type {
         position: relative;
@@ -283,6 +285,7 @@
     &:last-child {
         border-bottom: 0;
         font-size: fontSize("small");
+        font-weight: 600;
     }
 }
 
@@ -351,7 +354,7 @@
 
 .account-message {
     .is-read {
-        color: color("greys", "light");
+        color: stencilColor("color-textBase");
     }
 }
 
@@ -361,16 +364,12 @@
 
 .account-sidebar-block {
     font-size: fontSize("smaller");
-
-    + .account-sidebar-block {
-        margin-top: spacing("double");
-    }
-
-    .account-heading {
-        margin-bottom: spacing("single");
-    }
 }
-
+.account-sidebar-block-border{
+    border: container("border");
+    padding: 15px;
+    border-radius: 10px;
+}
 .account-order-address {
     @include u-listBullets("none");
 }
@@ -424,4 +423,9 @@
 
 .account-downloadsItem-availability {
     color: stencilColor("color-textSecondary");
+}
+@media(max-width: 1260px){
+    .account-listItem{
+        padding: 1.5rem 0 1.5rem 0px;
+    }
 }

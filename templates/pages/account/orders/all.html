@@ -7,10 +7,11 @@ customer:
 {{#partial "page"}}
 
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<div class="container">
 <h1 class="page-heading">{{lang 'account.orders.heading' }}</h1>
 {{> components/account/navigation account_page='orders'}}
-
 <div class="account account--fixed">
+    
     <div class="account-head">
         {{#if customer.store_credit.value '>' 0}}
             <div class="alertBox alertBox--storeCredit">
@@ -29,6 +30,6 @@ customer:
         </section>
     </div>
 </div>
-
+</div>
 {{/partial}}
 {{> layout/base}}

@@ -5,12 +5,16 @@
 .icon--ratingEmpty {
     svg {
         fill: stencilColor("icon-ratingEmpty");
+        width: 16px;
+        height: 16px;
     }
 }
 
 .icon--ratingFull {
     svg {
         fill: stencilColor("icon-ratingFull");
+        width: 16px;
+        height: 16px;
     }
 }
 
@@ -28,7 +32,18 @@
     display: inline-block;
 
     .icon {
+        width: 1.1rem!important;
         @include square(14px);
         margin-top: -3px; // 1
     }
+}
+.icon--ratingFull{
+    color: stencilColor("icon-ratingFull");
+}
+.icon--ratingEmpty{
+    color: stencilColor("icon-ratingEmpty");
+    opacity: .5;
+}
+.rating--small .icon i{
+    display: block;
 }

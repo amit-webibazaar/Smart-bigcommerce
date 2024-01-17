@@ -1,0 +1,21 @@
+{{#if theme_settings.home-offer-banner}}
+	<div class="section-spacing">
+		<div class="videobanner-bg-offer">
+			<div class="container">
+				<div class="off-img off-img-one">
+					{{#if theme_settings.offerbanner-img}}
+						<div class="video-img-banner">
+							<a href="{{theme_settings.offerbanner-img-link}}"><img class="img-fluid lazyload" data-sizes="auto" src="{{cdn '/assets/img/loading.svg'}}" data-src="/product_images/uploaded_images/{{theme_settings.offerbanner-img}}" width="1920px" height="550px" alt="banner"/></a>
+						</div>
+					{{/if}}
+					<div class="vidhover">
+						<div class="video-content">
+							<h1>{{theme_settings.Video-banner-content-heading}}</h1>
+							<p>{{theme_settings.Video-banner-content-subheading}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{{/if}}

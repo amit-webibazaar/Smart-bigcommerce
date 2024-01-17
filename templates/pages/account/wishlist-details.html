@@ -1,22 +1,23 @@
 {{#partial "page"}}
-<div class="account" data-pagination-wishlist>
-
-    {{#if wishlist.is_editable}}
-        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-    {{/if}}
+{{#if wishlist.is_editable}}
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+{{/if}}
+<div class="container" data-pagination-wishlist>
     <h2 class="page-heading">{{lang 'account.wishlists.view_heading' name=wishlist.name}}</h2>
     {{#if wishlist.is_editable}}
+        {{#if wishlist.is_public '>' 0}}
+        
+            {{#if wishlist.is_editable}}
         {{> components/account/navigation account_page='wishlists'}}
     {{/if}}
-
-    {{#if wishlist.is_editable}}
-        {{#if wishlist.is_public '>' 0}}
+        
             <div class="panel share-wishlist">
                 <div class="panel-body">
                     <h5>{{lang 'account.wishlists.share_intro'}}</h5>
                     <input class="form-input" value="{{settings.base_url}}{{wishlist.share_url}}" readonly>
                 </div>
             </div>
+            
         {{/if}}
     {{/if}}
 
@@ -25,7 +26,6 @@
     {{else}}
         {{> components/common/alert/alert-info (lang 'account.wishlists.empty_wishlist')}}
     {{/if}}
-
 </div>
 {{/partial}}
 {{> layout/base}}

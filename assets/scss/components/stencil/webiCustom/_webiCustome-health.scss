@@ -1,0 +1,907 @@
+
+input:focus+label {
+    outline: none !important;
+}
+input:focus{
+    outline: none !important;
+}
+// second layout header css
+.theme_health .my-custom-sidenav .navUser-action svg {
+    height: auto;
+}
+.theme_health .webi-subscribe{
+    width: 100%;
+}
+.theme_health .webi-subscribe .footer-info-heading{
+    display: none;
+}
+.theme_health .newslatter-footer{
+    background-color: transparent;
+}
+.theme_health .webi-subscribe p{
+    color: stencilColor("footer-textColor");
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    display: block;
+}
+.theme_health .header-logo--left .head-contact{
+    order: 2;
+    text-align: center;
+}
+.theme_health .header-logo--left .head-icons{
+    order: 3;
+}
+.theme_health .blogshadow .blog-right{
+    padding: 15px;
+    background: stencilColor("color-white");
+    box-shadow: 2px 5px 8px 2px rgba(0,0,0,0.15);
+    margin: -30px 15px 0px 15px;
+}
+.theme_health .blog-left{
+    z-index: -1;
+}
+// Home product section header and cards css
+.theme_health .countdown p{
+    margin-right: 0px;
+    margin-left: 10px;
+}
+.theme_health .all-head{
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    height: unset;
+    min-height: unset;
+    position: unset;
+}
+.theme_health .new-pro{
+    align-items: center;
+}
+.theme_health .foot-copy .socialLinks--alt .icon{
+    border-radius: 0px;
+}
+.automotive-header-bottom{
+    background-color: stencilColor("bottom-header-backgroundColor");
+}
+.theme_health .mycustom-container .navPages-action:hover svg{
+    fill: stencilColor("color-textBase--hover");
+    stroke: stencilColor("color-textBase--hover");
+}
+.theme_health .second-head {
+    padding: 0px 0px;
+}
+.theme_health .card-figcaption-button{
+    margin: 5px 0 0 0;
+    background-color: stencilColor("product-button-backgroundColor");
+}
+.theme_health .card-figcaption-button:hover {
+    background-color: stencilColor("product-button-backgroundColorHover");
+}
+.theme_health .card-figcaption-button:hover svg {
+    fill:  stencilColor("color-white") !important;
+}
+
+// footer color settings
+.theme_health .footer-info-list a:hover, .theme_health .footer-copyright a:hover {
+    color: stencilColor("color-textBase");
+}
+.theme_health .footer-payment-icons :hover{
+    fill: stencilColor("color-textBase");
+}
+.theme_health .foot-copy .socialLinks--alt .icon:hover{
+    background: stencilColor('color-textBase');
+}
+// salebanner design
+.theme_health .off-img-first-col, .theme_health .off-img-three{
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.theme_health .off-img-thired-col{
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-top: 30px; 
+}
+// salebanner design end
+.theme_health .price-variant, .theme_health .title-rating{
+    display: block;
+}
+.theme_health .card-title, .theme_health .card-text.card-rating, .theme_health .card-text.myprice, .theme_health .card-product-swatch{
+    width: 100%;
+}
+.theme_health .card-rating .rating--small{
+    text-align: left;
+}
+.theme_health .product-brandname{
+    padding-bottom: 5px;
+    color: stencilColor("color-textBase");
+}
+.theme_health article .wb-list-product-reviews .avg-rate{
+    width: 100%;
+    height: auto;
+    text-align: left;
+}
+.theme_health article .wb-list-product-reviews .or-rate {
+    opacity: 1;
+    transform: unset;
+}
+.theme_health article .fa.fa-star.emstar, .theme_health article .rate-tot{
+    display: none;
+}
+.theme_health .card-product-swatch .custom-swatch-form-field{
+    justify-content: left;
+}
+.theme_health .card-product-swatch{
+    padding-top: 10px;
+}
+.theme_health .pagination-list li a, .theme_health .pagination-list li button, .theme_health .pagination-item.pagination-item--current{
+    border-radius: 0px;
+}
+// card design end
+.theme_health .card-figure{
+    border-radius: 0px;
+}
+.theme_health .card-body .abc{
+    text-align: left;
+    padding: 15px 15px 15px 15px;
+    border-radius: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    background: stencilColor("color-white");
+
+    @include breakpoint("small") {
+        
+    }
+    .product-brandname{
+        display: none;
+    }
+}
+.theme_health #brand{
+    background: stencilColor("custom-second-background-color");
+}
+// Home category section
+.theme_health .img-des{
+    background: none;
+}
+.theme_health .homecategory {
+    align-items: center;
+}
+.theme_health .home-cate-item{
+    border-top: none;
+}
+.theme_health .topsp {
+    .slick-slide img{
+        border-radius: 0px;
+    }
+    .cpton-p .cate-ti{
+        border-radius: 10px;
+    }
+    .cate-img:before{
+        border-radius: 10px;
+    }
+    .cate-shop{
+        border-radius: 40px;
+    }
+}
+
+// Home offer banner section
+.theme_health .features-img-descri{
+    position: absolute;
+    top: 30%;
+    left: 15px;
+    right: 5%;
+    bottom: 0;
+    text-align: left;
+}
+.theme_health .features-img-descri h1{
+    width: 100%;
+}
+.theme_health .features-img-descri a{
+    border-radius: 50px;
+}
+// Home testimonial section css
+.theme_health .testi-box{
+    border: none;
+}
+.test-quote-icon {
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #001a77;
+    padding: 15px;
+}
+.theme_health .testi-contant svg{
+    width: 36px;
+    height: 36px;
+    fill: stencilColor("color-white");
+    transform: scale(-1,1);
+    position: unset;
+    opacity: 1;
+}
+.theme_health .testi-detail {
+    margin-top: 0px;
+}
+// Home blog section css
+.theme_health .main-b-b{
+    border-radius: 10px;
+}
+.theme_health .read-more-blog .readmore_link{
+    border-radius: 40px;
+}
+.theme_health .date-time{
+    border-radius: 8px 0px 8px 0px;
+}
+.theme_health .webi_post_hover, .theme_health .webi_post_hover .icon{
+    border-radius: 0px;
+}
+.theme_health .mynewblog .productCarousel-slide {
+    border-bottom: none;
+}
+// Home footer section css
+.theme_health .foot-about .socialLinks{
+    text-align: left;
+}
+.theme_health .webi-subscribe .form-prefixPostfix .button{
+    border-radius: 0px;
+}
+.theme_health .webi-subscribe .form-prefixPostfix .button:hover{
+    background: stencilColor("button--primary-backgroundColor");
+    color: stencilColor("button--primary-colorHover");
+}
+.theme_health .webi-subscribe .form-field .form-prefixPostfix{
+    border: none;
+}
+.theme_health #nl_email{
+    height: 45px;
+    border: 1px solid stencilColor("color-textBase");
+    margin-right: 5px;
+    border-radius: 0px!important;
+    border-color: stencilColor("input-border-color")!important;
+}
+
+.theme_health .foot-phone{
+    border-radius: 5px;
+}
+.theme_health .foot_store_icons li,.theme_health .foot-social .socialLinks--alt .icon{
+    border-radius: 50px;
+}
+// Other page css
+.theme_health .productList .card-body .abc{
+    background: 0;
+}
+.theme_health .productList .card-figcaption-button{
+    margin: 0;
+}
+
+.theme_health .add-cart{
+    margin-bottom: 0px;
+}
+.theme_health .productList .card-figure {
+    border-radius: 10px 0 0 10px;
+}
+.theme_health .realted,.theme_health .also-view{
+    align-items: center;
+}
+.theme_health .catename:hover{
+    color: stencilColor("color-textBase--hover");
+}
+.theme_health .cate-ti .catename:hover::before{
+    border-bottom: 1px solid stencilColor("color-textBase--hover");
+}
+.theme_health .sale-flag-sash, .theme_health .sold-out-flag-sash{
+    border-radius: 20px;
+}
+.theme_health .off-img-second,.theme_health .off-img-fifth{
+    padding-top: 20px;
+}
+.theme_health .np-subscription-form #nl_email{
+    border-radius: 8px!important;
+}
+.theme_health .heroCarousel ul.slick-dots li.slick-active button, .theme_health .heroCarousel .slick-dots li button::before{
+    border-radius: 0px;
+}
+.theme_health .card-figure .second-img, .theme_health .card-image, .theme_health .productCarousel-slide .card, .theme_health .video-img-banner img{
+    border-radius: 0;
+}
+.theme_health .modal, .theme_health .account{
+    border-radius: 0px;
+}
+// all theme border radius
+.theme_health{
+    .form-input,.button,.alertBox,.navBar--sub .navBar-section,.navBar--sub .navBar-item,.panel--address .panel-body,.socialLinks-item .socialLinks__link,
+    .add-to-cart-wrapper .form-increment,.form-option,.productView-rating,.form-option-variant--color, .form-option-variant--pattern,.acd,
+    ol.breadcrumbs,.newsletter_popup .np-inner .np-right .np-subscription-form .form-field .form-prefixPostfix .form-input,.mygift,.navUser-item--wishlist, .blog-body-panal, .blog-thumbnail img, .tag a,
+    .single-blog .socialLinks .icon svg, .allcomment .blog-post-body, .form-select, .account-sidebar-block-border, .login-form{
+        border-radius: 0px!important;
+    }
+}
+.theme_health {
+    .productView-description,.navUser .dropdown-menu,.cate-border,.actionBar-section .form-field,.actionBar-section .form-select,.category-top,.facetLabel,
+    .category-top img,.productView-thumbnails img,.productView-thumbnail-link,.productView-img-container img,.productView-image .easyzoom-flyout, #currencySelection1.dropdown-menu{
+        border-radius: 0px;
+    }
+}
+.theme_health .catagory-space .page-sidebar{
+    border-radius: 0px!important;
+}
+.theme_health .productView .form-wishlist .button.is-open{
+    border-radius: 0px;
+}
+.theme_health .cart-item-quantity .form-increment .form-input{
+    border-radius: 0px!important;
+}
+.theme_health {
+    .cart-total .form-select,.theme_health .cart-total .form-input,.productView-options .product-variant .form-input,.form-checkbox+.form-label::before,
+#recentlyBougthProducts .RB_Items .RB_Item,.ask-an-expert-footer img{
+    border-radius: 0px!important;
+}
+}
+
+.theme_health .slick-next, .theme_health .slick-prev, .theme_health #progress-value, .theme_health #scroll{
+    border-radius: 0;
+}
+.theme_health .navList-action--checkbox::before{
+    border-radius: 0px!important;
+}
+.theme_health #wishlist-dropdown.is-open .button{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.theme_health .new-customer .panel-header{
+    border-radius: 0px;
+}
+.theme_health .new-customer .panel-body,.theme_health .navPage-subMenu{
+    border-radius: 0px;
+}
+.theme_health #recentlyBougthProducts .RB_Items .RB_Item .RB_close_btn{
+    border-radius: 0px;
+}
+.theme_health .wb-search .form-input{
+    border-radius: 0px 0 0 0px!important;
+    border: 1px solid #eee!important;
+    padding: 25px;
+}
+.theme_health .wbSearch .form-input:focus {
+    border: 1px solid #eee!important;
+}
+.theme_health .wb-search .input-group-btn{
+    right: 7px;
+    top: 4px;
+}
+.theme_health #search .wb-search-btn{
+    border-radius: 0px;
+    height: 52px;
+    width: 52px;
+    padding: 10px 12px;
+}
+.theme_health .deliveryinfo svg{
+    fill: stencilColor("color-textBase");
+}
+.theme_health .deliveryinfo h1, .theme_health .deliveryinfo p{
+    color: stencilColor("color-textBase");
+}
+.theme_health .service-bg{
+    padding: 0px;
+    border-bottom: none;
+}
+.theme_health .deliveryinfo{
+    border: 1px solid stencilColor("custom-border-color");
+    padding: 20px;
+    border-style: dashed;
+    border-width: 2px;
+}
+.theme_health .mycustom-header{
+    padding: 15px 15px!important;
+}
+.theme_health .custom-header-page .navPage-subMenu .navPages-item .navPages-action{
+    color: stencilColor("color-textBase");
+}
+.theme_health .custom-header-page .navPage-subMenu .navPages-item .navPages-action:hover{
+    color: stencilColor("color-textBase--hover");
+}
+.theme_health .navPage-subMenu{
+    top: auto;
+}
+.theme_health .d-search button:hover svg{
+    stroke: stencilColor("navPages-color-hover");
+}
+.theme_health .acd .navUser-action svg{
+    fill: stencilColor("color-textBase");
+}
+.theme_health .mycustom-container .navUser-action svg{
+    fill: stencilColor("color-textBase");
+}
+.theme_health .mycustom-container .d-search button svg{
+    stroke: stencilColor("color-textBase");
+    &:hover{
+        stroke: stencilColor("color-textBase--hover");
+    }
+}
+.theme_health .navUser-action:hover svg{
+    fill: stencilColor("navPages-color-hover");
+}
+.theme_health {
+    .features-img-banner img,.mp_product_list img,.testi-box,.home_instagram_feed_main .home_instagram_feed ul li .IGFeed_link img,
+    .home_instagram_feed_main .home_instagram_feed ul li .IGFeed_link .IGFees_hover{
+        border-radius: 0px;
+    }
+}
+.theme_health .home_most_popular_products .mp_product_list .mp_inner .product_section .mp-card .mp-action a{
+    border-radius: 0px;
+}
+.theme_health .card-product-swatch .custom-swatch-form-field .option-swatch{
+    border-radius: 0px;
+    width: 22px;
+    height: 22px;
+}
+.theme_health .card-product-swatch .custom-swatch-form-field .option-swatch label{
+    border-radius: 0px;
+}
+.theme_health .productBadges .sale-flag-sash, .theme_health .productBadges .sale-flag-sash-percentage, .theme_health .productBadges .sold-out-flag-sash{
+    border-radius: 0;
+}
+.theme_health .testi-box svg{
+    fill: stencilColor("color-textBase--hover");
+}
+// HERO CAROUSEL
+// -----------------------------------------------------------------------------
+//
+// Purpose: Styles the hero carousel component, which basically adds extras to the
+// vendor slick carousel, to specifically display hero images.
+//
+// 1. Use object-fit on the image tag to keep aspect ratio and cover the space
+//    created by the outer div. The JS will detect browsers that do not support
+//    object-fit and instead copy the image src to a the background-image of the
+//    wrapper div and add the compat-object-fit class.
+//
+// 3. Allows image to scale on large screens while preventing the top and bottom
+//    from becoming cut off.
+// -----------------------------------------------------------------------------
+.theme_health .ask-an-expert-popup{
+    z-index: 99999999;
+}
+.theme_health .slidedes {
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+    text-align: center;
+    padding: 0 30px;
+    left: 0;
+}
+.theme_health .slide-flex {
+    display: flex !important;
+    align-items: center !important;
+    background: none;
+    border: none;
+}
+.theme_health .slidecap{
+    background: stencilColor("color-white");
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .18%);
+    padding: 13% 0;
+    -ms-flex: 0 0 47%;
+    flex: 0 0 47%;
+    max-width: 47%;
+}
+.theme_health .heroCarousel .slick-next, .theme_health .heroCarousel .slick-prev{
+    border-radius: 0px;
+}
+.theme_health .heroCarousel-content .heroCarousel-action{
+    border-radius: 0px;
+    background-color: stencilColor("button--primary-backgroundColor");
+    border-color: stencilColor("button--primary-backgroundColor");
+    padding: 15px 15px;
+    font-size: 14px;
+}
+.theme_health .heroCarousel-content .heroCarousel-action:hover{
+    background-color: stencilColor("button--primary-backgroundColorHover");
+    border-color: stencilColor("button--primary-backgroundColorHover");
+}
+.heroCarousel-slide {
+    position: relative;
+    margin: 0;
+    a {
+        text-decoration: none;
+    }
+
+    &.stretch {
+        .heroCarousel-image {
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+
+        &.compat-object-fit { // 1
+            .heroCarousel-image {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }    
+
+    &.compat-object-fit { // 1
+        overflow: hidden;
+        
+        .heroCarousel-image {
+            width: auto;
+        }
+    }
+
+    .heroCarousel-image-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+    }
+}
+.heroCarousel .slick-current.slick-active .heroCarousel-title,.heroCarousel .slick-current.slick-active .heroCarousel-description{
+    transform: unset;
+}
+.theme_health .heroCarousel-content{
+    width: 50%;
+}
+.theme_health .heroCarousel-action{
+    margin: 0;
+
+    @include breakpoint("medium") {
+        margin-top: spacing("single");
+    }
+}
+.theme_health .social-share-icon-heading{
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.theme_health .heroCarousel-content{
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.theme_health .heroCarousel .slick-dots{
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+.theme_health .heroCarousel .slick-dots li::after{
+    display: none;
+}
+.theme_health .heroCarousel .slick-dots li{
+    width: auto;
+}
+@media(min-width: 1200px) and (max-width: 1440px){
+    .theme_health .slidecap{
+        padding: 8% 0;
+    }
+    .theme_health .navPages-action {
+        padding: 10px 20px 10px 20px!important;
+    }
+}
+@media(min-width: 992px) and (max-width: 1199px){
+    .theme_health .slidecap{
+        padding: 8% 0;
+    }
+    .theme_health .navPages-action {
+        padding: 10px 20px 10px 20px!important;
+    }
+    .theme_health .mycustom-header {
+        padding: 20px 15px !important;
+    }
+}
+@media (min-width: 801px) and (max-width: 991px){
+    
+    .theme_health .navPages-action {
+        padding: 10px 20px 10px 20px!important;
+    }
+    
+}
+@media(min-width: 768px) and (max-width: 991px){
+    .theme_health .slidecap{
+        padding: 8% 0;
+    }
+    .theme_health .heroCarousel-title{
+        font-size: 18px !important;
+        margin-bottom: 0;
+    }
+    .theme_health .heroCarousel-description{
+        font-size: 14px !important;
+        line-height: 25px;
+        margin: 15px 0;
+    }
+    .theme_health .theme_health .heroCarousel-content .heroCarousel-action{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .theme_health .slidedes{
+        left: 15px !important;
+    }
+    .theme_health .service-cont:nth-child(1),.theme_health .service-cont:nth-child(2){
+        margin-bottom: 15px;
+    }
+}
+@media(min-width: 576px) and (max-width: 767px){
+    .theme_health .off-img-three{
+        display: block;
+    }
+    .theme_health .heroCarousel-title{
+        font-size: 18px !important;
+        margin-bottom: 0;
+    }
+    .theme_health .heroCarousel-description{
+        font-size: 14px !important;
+        line-height: 25px;
+        margin: 15px 0;
+    }
+    .theme_health .heroCarousel-content .heroCarousel-action{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .theme_health .service-cont:nth-child(1),.theme_health .service-cont:nth-child(2){
+        margin-bottom: 15px;
+    }
+}
+@media(max-width: 1409px){
+    .theme_health .heroCarousel-title{
+        font-size: 34px;
+    }
+    
+}
+@media(max-width: 1199px){
+    .theme_health .myquick-search{
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .theme_health .second-head-icons{
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .theme_health .webi-subscribe .form-prefixPostfix .button{
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+@media (min-width: 768px){
+    .theme_health .heroCarousel.slick-vertical .slick-slide{
+        position: sticky;
+        top: 0;
+    }
+    .theme_health .heroCarousel.slick-vertical .slick-list{
+        overflow: unset;
+        transform: unset;
+        height: 100% !important;
+    }
+    .theme_health .heroCarousel.slick-vertical .slick-arrow{
+        display: none !important;
+    }
+}
+@media(max-width: 991px){
+    .theme_health .add-cart {
+        bottom: 15px;
+    }
+    .theme_health .cpton-p {
+        opacity: 1;
+        border: none;
+    }
+    .theme_health .footer {
+        margin-top: 60px;
+    }
+    .theme_health .off-img-thired-col{
+        padding-top: 10px;
+    }
+}
+@media(max-width: 800px){
+    .theme_health .mycustom-header {
+        padding: 0px 15px !important;
+    }
+    .theme_health .heroCarousel-content {
+        width: 55%;
+    }
+    .theme_health .newslatter-footer{
+        padding: 0px 0px 0px 0px;
+    }
+    
+    .theme_health .mycustom-container .mobileMenu-toggle .mobileMenu-toggleIcon, .theme_health .mycustom-container .mobileMenu-toggle .mobileMenu-toggleIcon::before, .theme_health .mycustom-container .mobileMenu-toggle .mobileMenu-toggleIcon::after{
+        background: stencilColor("color-textBase"); 
+    }
+    .theme_health .head-promo-text{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%; 
+        text-align: center!important;
+    }
+    .theme_health .heroCarousel-content {
+        width: 50%;
+    }
+    .theme_health .card-figcaption-button{
+        background-color: stencilColor("secondary-background-color");
+    }
+    .theme_health .card-body .card-figcaption{
+        margin-top: 10px;
+    }
+    .theme_health .slidedes{
+        left: 0px !important;
+    }
+    .theme_health .myquick-search {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .theme_health .mycustom-header {
+        padding: 0px;
+    }
+    .fashion-search{
+        padding: 0;
+        margin: 0;
+    }
+    .fashion-search .myquick-search{
+        padding: 0 0px 15px 0px;
+    }
+    .theme_health .wb-search .form-input{
+        padding: 20px;
+    }
+    .theme_health .wb-search .input-group-btn{
+        right: 4px;
+        top: 4px;
+    }
+    .theme_health #search .wb-search-btn{
+        height: 45px;
+        padding: 6px 8px;
+    }
+    .theme_health .wbSearch .close-nav{
+        display: none;
+    }
+}
+@media(max-width: 767px){
+    
+    .theme_health .card-figcaption-button {
+        padding: 8px;
+    }
+    .theme_health .all-cate{
+        order: 2;
+    }
+    .theme_health .heroCarousel-slide{
+        border: none;
+    }
+    .theme_health .slideimg::after{
+        content: '';
+        position: absolute;
+        background-color: #000;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.3;
+    }
+    .theme_health .heroCarousel-title,.theme_health .heroCarousel-description{
+        color: stencilColor("color-white");
+    }
+    .theme_health .heroCarousel-slide .heroCarousel-image-wrapper{
+        position: relative;
+    }
+    .theme_health .heroCarousel .slick-next::before, .theme_health .heroCarousel .slick-prev::before{
+        height: 14px;
+        width: 14px;
+    }
+    .theme_health .heroCarousel .slick-prev {
+        left: auto;
+        right: 40px;
+    }
+    .theme_health .heroCarousel .slick-next {
+        right: 0px;
+    }
+    .theme_health .heroCarousel .slick-prev::after {
+        content: '';
+        position: absolute;
+        background: stencilColor("custom-border-color");
+        width: 2px;
+        height: 25px;
+        left: 37px;
+        top: 7px;
+    }
+    .theme_health .slidecap,.theme_health .slideimg{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .theme_health .slidecap{
+        position:absolute;
+        background: 0;
+        box-shadow: none;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media(max-width: 600px){
+    .theme_health .footer {
+        margin-top: 30px;
+    }
+    .theme_health .heroCarousel-content {
+        width: 75%;
+    }
+    .theme_health .heroCarousel-title{
+        font-size: 16px !important;
+        margin-bottom: 10px;
+    }
+    .theme_health .heroCarousel-description{
+        display: none;
+    }
+    .top-bar-f a {
+        font-size: 14px;
+    }
+    .theme_health .features-img-descri {
+        top: 30%;
+        right: 0;
+    }
+    .theme_health .off-img-one {
+        border-top: none;
+    }
+}
+@media(max-width: 575px){
+    .theme_health .off-img-thired-col .features-img-descri .automotive-sale-off, .theme_health .off-img-thired-col .features-img-descri h1{
+        display: none;
+    }
+    .theme_health .off-img-three{
+        display: block;
+    }
+    .theme_health .off-img-first-col, .theme_health .off-img-three{
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .theme_health .off-img-thired-col{
+        padding-top: 0;
+        margin: 0;
+    }
+    .theme_health .card-body .card-figcaption {
+        margin-top: 0px;
+    }
+    .theme_health .heroCarousel-content .heroCarousel-action {
+        font-size: 12px;
+        padding: 8px 8px;
+    }
+    .theme_health .features-img-descri {
+        top: 20%;
+        width: 50%;
+    }
+    .theme_health .testi-box .img-deat img{
+        width: 80px;
+        height: 80px;
+    }
+    .theme_health .img-deat{
+        width: 80px;
+        height: 80px;
+    }
+    .theme_health .parallax-bg .page-heading{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media(max-width: 550px){
+    .theme_health .sidebar-recently-view .rv-top,.theme_health .ask-an-expert-footer svg{
+        border-radius: 50px!important;
+    }
+    .theme_health .sidebar-recently-view.is-active{
+        background: transparent;
+    }
+}
+@media(max-width: 375px){
+    .theme_health .features-img-descri {
+        top: 12%;
+    }
+    .automotive-firts-ban-offer{
+        display: none;
+    }
+}
+@media(max-width: 425px){
+    .announcementbar {
+        display: none;
+    }
+}

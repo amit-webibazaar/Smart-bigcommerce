@@ -1,4 +1,5 @@
-<ul class="tabs" data-tab>
+<div class="tabs-container col-3">
+    <ul class="tabs" data-tab>
     {{#if product.description}}
         <li class="tab is-active">
             <a class="tab-title" href="#tab-description">{{lang 'products.description'}}</a>
@@ -23,8 +24,9 @@
             <a class="tab-title productView-reviewTabLink" href="#tab-reviews">{{lang 'products.reviews.header' total=product.reviews.total}}</a>
         </li>
     {{/all}}
-</ul>
-<div class="tabs-contents">
+    </ul>
+</div>
+<div class="tabs-contents col-9">
     {{#if product.description}}
         <div class="tab-content is-active" id="tab-description">
             {{{product.description}}}

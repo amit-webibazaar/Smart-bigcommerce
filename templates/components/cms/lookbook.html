@@ -1,0 +1,84 @@
+<div class="section-spacing">
+    <div class="LookBook_Section_BackGround">
+        <div class="container">
+            <div class="home_most_popular_products">
+                <div class="myheadeing">
+                    <h2 class="page-heading">
+                    {{theme_settings.lookbook-heading}}
+                    <p>{{theme_settings.subheading-lookbook}}</p>
+                    <span class="head-line"></span>
+                    </h2>
+                </div>
+                <div class="mp_parent_slider" 
+                    data-slick='{
+                        "arrows": true,
+                        "dots": false,
+                        "slidesToShow": 1,
+                        "slidesToScroll": 1,
+                        "prevArrow": ".js-product-prev-arrow-lookbook",
+                        "nextArrow": ".js-product-next-arrow-lookbook"
+                    }' >
+
+                
+                    <!-- Slider 1 -->
+                    <div class="mp_product_list">
+                        <div class="mp_inner">
+                            <div class="image_section">
+                                <img class="img-fluid lazyload" src="{{cdn 'assets/img/loading.svg'}}" data-src="/product_images/uploaded_images/{{theme_settings.mp_slider_1_image}}" alt="Most Popular" width="auto" height="auto" />
+                                {{#each (split theme_settings.mp_slider_1_pIdsDots ",") as |productDots| }}
+                                    {{#each (split ../theme_settings.mp_slider_1_pIds ",") as |productIds| }}
+                                        {{#if @../index '==' @index}}
+                                            <span data-id="{{productIds}}" class="dots {{#if @index '==' '0'}}active{{/if}}" data-index="{{@index}}" style="top:{{first (split productDots '-')}};left:{{last (split productDots '-')}}" ></span>
+                                        {{/if}}
+                                    {{/each}}
+                                {{/each}}
+                            </div>
+                            <div class="product_section mp-pro-data-1"></div>
+                            <input type="hidden" id="mp_slider_1_data" value="{{theme_settings.mp_slider_1_pIds}}" />
+                        </div>
+                    </div>
+
+                    <!-- Slider 2 -->
+                    <div class="mp_product_list">
+                        <div class="mp_inner">
+                            <div class="image_section">
+                                <img class="img-fluid lazyload" src="{{cdn 'assets/img/loading.svg'}}" data-src="/product_images/uploaded_images/{{theme_settings.mp_slider_2_image}}" alt="Most Popular" width="auto" height="auto" />
+                                {{#each (split theme_settings.mp_slider_2_pIdsDots ",") as |productDots| }}
+                                    {{#each (split ../theme_settings.mp_slider_2_pIds ",") as |productIds| }}
+                                        {{#if @../index '==' @index}}
+                                            <span data-id="{{productIds}}" class="dots {{#if @index '==' '0'}}active{{/if}}" data-index="{{@index}}" style="top:{{first (split productDots '-')}};left:{{last (split productDots '-')}}" ></span>
+                                        {{/if}}
+                                    {{/each}}
+                                {{/each}}
+                            </div>
+                            <div class="product_section mp-pro-data-2"></div>
+                            <input type="hidden" id="mp_slider_2_data" value="{{theme_settings.mp_slider_2_pIds}}" />
+                        </div>
+                    </div>
+
+                    <!-- Slider 3 -->
+                    <div class="mp_product_list">
+                        <div class="mp_inner">
+                            <div class="image_section">
+                                <img class="img-fluid lazyload" src="{{cdn 'assets/img/loading.svg'}}" data-src="/product_images/uploaded_images/{{theme_settings.mp_slider_3_image}}" alt="Most Popular" width="auto" height="auto" />
+                                {{#each (split theme_settings.mp_slider_3_pIdsDots ",") as |productDots| }}
+                                    {{#each (split ../theme_settings.mp_slider_3_pIds ",") as |productIds| }}
+                                        {{#if @../index '==' @index}}
+                                            <span data-id="{{productIds}}" class="dots {{#if @index '==' '0'}}active{{/if}}" data-index="{{@index}}" style="top:{{first (split productDots '-')}};left:{{last (split productDots '-')}}" ></span>
+                                        {{/if}}
+                                    {{/each}}
+                                {{/each}}
+                            </div>
+                            <div class="product_section mp-pro-data-3"></div>
+                            <input type="hidden" id="mp_slider_3_data" value="{{theme_settings.mp_slider_3_pIds}}" />
+                        </div>
+                    </div>                
+                </div>
+                <div class="all-btn recent-post">                
+                    <button class="js-product-prev-arrow-lookbook slick-prev slick-arrow"><svg width="38px" height="26px"><use xlink:href="#arrow-left"></use></svg></button>
+                    <button class="js-product-next-arrow-lookbook slick-next slick-arrow"><svg width="38px" height="26px"><use xlink:href="#arrow-right"></use></svg></button>            
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

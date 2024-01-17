@@ -1,11 +1,12 @@
 {{#partial "page"}}
-<h1>{{lang 'sitemap.page_title'}}</h1>
-
-<ul>
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <div class="container">
+<h1 class="page-heading">{{lang 'sitemap.page_title'}}</h1>
+<ul class="row list-unstyled sitemap-page">
 {{#each sitemap}}
-    <li>
+    <li class="col-md-4 col-sm-6 col-12">
         <h2>{{label}}</h2>
-        <ul>
+        <ul class="mysitemap">
             {{#each body}}
             <li>
                 <a href="{{url}}">{{label}}</a>
@@ -29,3 +30,4 @@
 </ul>
 {{/partial}}
 {{> layout/base}}
+</div>

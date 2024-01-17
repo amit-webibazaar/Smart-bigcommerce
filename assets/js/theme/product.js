@@ -59,6 +59,67 @@ export default class Product extends PageManager {
         });
 
         this.productReviewHandler();
+
+        this.pdpVideo();
+
+        this.recentlyViewedCookies(this.context)
+    }
+
+    getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1);
+            if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+        }
+        return "";
+    }
+
+    recentlyViewedCookies(context) {
+        const { productId, recently_viewed_expires_date, recently_viewed_product_limit} = context;
+        if(productId > 0){
+            const dateExp = new Date();
+            dateExp.setDate(dateExp.getDate() + parseInt(recently_viewed_expires_date));
+
+            let productIdsList = []
+            const exit_rv_cookie = this.getCookie('bc_recently_viewed');
+            const exit_rv_cookie_spt = exit_rv_cookie.split(",");  
+            if(exit_rv_cookie_spt.length > 0 && exit_rv_cookie_spt.length == recently_viewed_product_limit){ return false; }
+
+            if(document.cookie.indexOf('bc_recently_viewed') != -1) {
+                productIdsList = exit_rv_cookie_spt;
+                if(exit_rv_cookie_spt.indexOf(productId) === -1) {
+                    productIdsList.push(productId)
+                }
+            }else{
+                productIdsList.push(productId);
+            }
+            if(productIdsList.length > 0){
+                document.cookie = `bc_recently_viewed=${productIdsList};expires=${dateExp.toGMTString()}; path=/`;
+            }
+        }
+    }
+
+    pdpVideo() {
+        const hasVideo = $('.videomn');
+        if (hasVideo.length > 0) {
+            $('.videomn > a').each(function(){
+                $(this).on('click', function(){
+                    const videoID = $(this).attr('data-video-id');
+                    const iframe = '<iframe id="player" class="lazyload" type="text/html" width="640" height="390" src="https://www.youtube.com/embed/' + videoID + '?rel=0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>';
+                    $(this).addClass('is-active');
+                    $(this).parent('.videomn').children('a').removeClass('is-active');
+                    $("#player").remove();
+                    $(".productView-image").before(iframe).hide();
+                });
+            });
+            $(".productView-thumbnail:not(.videomn), .slick-prev.slick-arrow").click(function(){
+                $(".productView-images .videomn a").removeClass('is-active');
+                $("#player").remove();
+                $(".productView-image").show();
+            })
+        }
     }
 
     ariaDescribeReviewInputs($form) {

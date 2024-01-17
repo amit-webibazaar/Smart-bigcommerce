@@ -7,10 +7,13 @@
 // across breakpoints.
 //
 // -----------------------------------------------------------------------------
-
+.tab-content ol{
+    padding-left: 30px;
+}
 .tab {
-    border-top: $tab-active-border;
+    
     float: none;
+    padding-right: 20px!important;
 
     @include breakpoint("medium") {
         border-top-color: $tab-title-border-color;
@@ -22,20 +25,33 @@
         border-right-color: $tab-title-border-color;
 
         @include breakpoint("small") {
-            margin-bottom: $tab-title-border-bottom-offset;
+           
         }
 
         @include breakpoint("medium") {
-            border: $tab-active-border;
-            border-bottom: $tab-title-border;
+            
         }
     }
 }
-
+.tab.is-active .tab-title {
+   
+    color: stencilColor("color-textBase--hover")!important;
+}
+.productView-description .tabs .tab a::before {
+    background-color: transparent;
+    content: "";
+    height: 2px;
+    margin: 0 auto;
+    position: absolute;
+    top: 33px;
+    transition: all .4s ease-out 0s;
+    width: 3px;
+}
 .tab-title {
-    padding: spacing("half") + spacing("quarter") 0;
+    padding: 0 !important;
     text-align: center;
     text-decoration: $tab-title-text-decoration;
+    color: stencilColor("color-textBase");
 
     @include breakpoint("small") {
         text-align: left;
@@ -49,7 +65,9 @@
         padding: remCalc(11px) remCalc(18px);
     }
 }
-
+.tab-title:hover{
+    color: stencilColor("color-textBase--hover");
+}
 .tab-content {
     //
     // State for when tab-content has js generated of calculated content, like carousel
@@ -95,5 +113,31 @@
 
     .productReviews {
         border-top: 0;
+    }
+}
+// .tab-content{
+//     padding: 0px 0px 10px 0px !important;
+// }
+.tab-content {
+    display: none;
+}
+.tab-product .tab-content {
+    display: block;
+    padding: 0px 0 0 0!important;
+}
+@media(max-width: 1199px){
+    .tab-product .tab-content {
+        padding: 0px 0 0 0 !important;
+    }
+}
+@media(max-width: 320px){
+    .tab-title{
+        font-size: 13px;
+    }
+    .tab{
+        padding-right: 18px !important;
+    }
+    .productView-description .tabs .tab a::before{
+        top: 30px;
     }
 }

@@ -1,9 +1,9 @@
 {
-  "name": "bigcommerce-cornerstone",
-  "description": "The BigCommerce reference theme for the Stencil platform",
-  "version": "6.12.0",
+  "name": "Smart",
+  "description": "Smart is a best Multistore Responsive stencil BigCommerce Theme For all kind of Bag store.",
+  "version": "1.0.0",
   "private": true,
-  "author": "BigCommerce",
+  "author": "Webibazaar Template",
   "license": "MIT",
   "dependencies": {
     "@bigcommerce/stencil-utils": "6.15.1",

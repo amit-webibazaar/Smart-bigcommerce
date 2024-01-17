@@ -19,16 +19,23 @@ blog:
 {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
 <section class="page">
-    {{#unless theme_settings.hide_blog_page_heading }}
-        <h1 class="page-heading">{{ blog.name }}</h1>
-    {{/unless}}
-
-    {{#each blog.posts}}
-        {{> components/blog/post post=this theme_settings=../theme_settings}}
-    {{/each}}
-
-    {{> components/common/paginator pagination.blog}}
-</section>
+    
+    <div class="container mysingle-post">
+        {{#unless theme_settings.hide_blog_page_heading }}
+            <h1 class="page-heading">{{ blog.name }}</h1>
+        {{/unless}}
+        <div class="row blog-row-space">
+        {{#each blog.posts}}
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 blog-col-space">
+            {{> components/blog/post post=this}}
+        </div>
+        {{/each}}
+    </div>
+        <div class="text-center">
+        {{> components/common/paginator pagination.blog}}
+        </div>
+    </div>
+    </section>
 
 {{/partial}}
 {{> layout/base}}

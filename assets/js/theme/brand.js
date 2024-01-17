@@ -3,6 +3,8 @@ import CatalogPage from './catalog';
 import compareProducts from './global/compare-products';
 import FacetedSearch from './common/faceted-search';
 import { createTranslationDictionary } from '../theme/common/utils/translations-utils';
+import ProductDetails from './common/product-details';
+import productOptionGraphql from './set-product-option-with-graphql';
 
 export default class Brand extends CatalogPage {
     constructor(context) {
@@ -57,6 +59,8 @@ export default class Brand extends CatalogPage {
             $('html, body').animate({
                 scrollTop: 0,
             }, 100);
+        console.log(this.context)
+            productOptionGraphql(this.context)
         }, {
             validationErrorMessages: {
                 onMinPriceError,

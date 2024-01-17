@@ -17,10 +17,12 @@
     font-size: $tag-fontSize;
 
     a {
-        color: $tag-color;
+        color: stencilColor("color-textBase");
         display: inline-block;
         padding: $tag-padding;
         text-decoration: $tag-textDecoration;
+        background-color: stencilColor("secondary-background-color");
+        border-radius: 5px;
 
         &:hover {
             color: $tag-color-hover;

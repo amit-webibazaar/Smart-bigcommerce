@@ -12,6 +12,12 @@
     }
 }
 
+.form-input{
+    border-color: stencilColor("color-whitesBase") !important;
+}
+.form-select{
+    border-color: stencilColor("color-whitesBase") !important;
+}
 
 // Citadel inline messages
 // -----------------------------------------------------------------------------
@@ -181,7 +187,7 @@
 }
 
 .form-fileDescription {
-    color: color("greys", "light");
+    color: stencilColor("color-textBase");
     font-size: fontSize("smallest");
 }
 
@@ -190,7 +196,9 @@
     border-radius: $input-border-radius;
     padding: spacing("single");
 }
-
+.form-field-group{
+    border-color: stencilColor("color-secondaryDark");
+}
 // This component should live inside a .form-row
 .form-column {
     @include grid-column(12);
@@ -207,13 +215,13 @@
 
     .form-input,
     .button {
-        display: block;
-        width: 100%;
+      
     }
 
     .form-input {
+
         @include breakpoint("large") {
-            width: auto;
+            
         }
 
         @include placeholder {
@@ -237,25 +245,14 @@
 }
 
 .form-prefixPostfix--centeredColumn {
-    &.wrap {
-        flex-direction: column;
-    }
-
     .g-recaptcha {
         margin: 2em auto 0;
-    }
-
-    .form-prefixPostfix-button--postfix {
-    
-        @include breakpoint("large") {
-            margin: 1em 0 spacing("half");
-        }
     }
 
 }
 
 .form-prefixPostfix-button--postfix {
-    margin: spacing("half") 0 0;
+    margin: 0 0 0 spacing("half");
     order: 1; // 1
 
     @include breakpoint("large") {
@@ -278,19 +275,24 @@
 .form-input--incrementTotal {
     border: 0;
     display: inline-block;
-    font-size: fontSize("smaller");
-    font-weight: fontWeight("bold");
+    font-size: 15px;
+    font-weight: 500;
     height: auto;
     padding: 0;
     text-align: center;
     vertical-align: middle;
-    width: remCalc(35px);
+    width: 40px;
+    height: 40px;
+    margin: 0 10px 0 10px;
+    border-radius: 5px!important;
 
     .form-field--success & {
         float: none;
     }
 }
-
+.productView .form-increment .button:hover{
+    box-shadow: 2px 0px 8px 0px rgba(0,0,0,0.10);
+}
 
 // Stencil form options
 // -----------------------------------------------------------------------------
@@ -311,6 +313,7 @@
     margin-right: spacing("third");
     padding: 1px;
     transition: all 0.15s ease;
+    border-radius: 5px;
 
     &:hover {
         border-color: stencilColor("input-border-color-active");
@@ -325,10 +328,11 @@
 .form-option-variant {
     display: inline-block;
     font-size: $body-fontSize; // 2
-    min-width: remCalc(38px);
-    padding: 1px spacing("quarter");
+    min-width: 36px;
+    padding: 7px;
     pointer-events: none; // 1
     text-align: center;
+    min-height: 36px;
 }
 
 .form-option-variant--color,
@@ -336,6 +340,7 @@
     @include square(22);
     min-width: initial;
     padding: 0;
+    border-radius: 5px;
 
     @include breakpoint("small") { // 4
         pointer-events: inherit; // 3
@@ -377,9 +382,17 @@
         padding-left: 0;
         padding-right: 0;
         width: 100%;
+        background: stencilColor("button--primary-backgroundColor");
+        border-color: stencilColor("button--primary-backgroundColor");
+        color: stencilColor("button--primary-color");
+        
     }
 }
-
+.form-minMaxRow .form-field .button:hover{
+    background:stencilColor("button--primary-backgroundColorHover");
+    border-color: stencilColor("button--primary-backgroundColorHover");
+    color: stencilColor("button--primary-colorHover");
+}
 
 // Form row modifications
 // -----------------------------------------------------------------------------
@@ -409,9 +422,9 @@
                 background-color: $productOptions-strikethrough-color;
                 content: "";
                 height: 2px;
-                left: -5px;
+                left: -8px;
                 position: absolute;
-                top: 11px;
+                top: 17px;
                 transform: rotate(-45deg);
                 width: 141%;
             }
@@ -424,5 +437,36 @@
     .unavailable {
         opacity: $productOptions-disable-opacity * 2;
         text-decoration: line-through;
+    }
+}
+.theme_jewelry #nl_email{
+    background-color: #f5f5f5;
+}
+#nl_email::placeholder{
+    color: stencilColor("footer-list-item-color");
+}
+.webi-subscribe .form-prefixPostfix .button span{
+    display: inline-block;
+    padding-top: 1px;
+}
+.form-input:focus{
+    border-color: stencilColor("primary-background-color") !important;
+}
+.webi-subscribe .form{
+    margin-bottom: 0px;
+    .form-field{
+        margin: 0px;
+    }
+}
+@media(max-width: 767px){
+    .form-field {
+        margin: 0 0 1rem;
+    }
+}
+
+@media(max-width: 600px){
+    .webi-subscribe .button--primary{
+        padding: 0 15px;
+        font-size: 14px;
     }
 }

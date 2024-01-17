@@ -2,9 +2,9 @@
 // THEME FOCUS (global)
 // =============================================================================
 
-$outline-width:  2px;
+$outline-width:  0;
 $outline-style:  solid;
-$outline-color:  #0f7fff;
+$outline-color:  #0F7FFF;
 $outline-offset: 1px;
 
 input,
@@ -16,14 +16,14 @@ details,
 [tabindex]:not([tabindex="-1"]),
 [contenteditable="true"] {        
     &:focus {
-        outline: $outline-width $outline-style $outline-color !important;
-        outline-offset: $outline-offset !important;        
+        outline: none $outline-style $outline-color;
+        outline-offset: 1px;   
     }
 }
 
 label {
     input:focus + & {
-        outline: $outline-width $outline-style $outline-color !important;
-        outline-offset: $outline-offset !important;        
+        outline: 1px solid;
+        outline-offset: 1px;           
     }
 }

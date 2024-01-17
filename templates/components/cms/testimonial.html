@@ -1,0 +1,163 @@
+{{#if theme_settings.home-testimonial}}
+    <div class="section-spacing">
+        <div class="parallax-bg">
+            <div class="container">
+                <div class="myheadeing">
+                    <h2 class="page-heading">
+                        {{theme_settings.testimonial-heading}}
+                        <p>{{theme_settings.subheading-testimonial}}</p>
+                        <span class="head-line"></span>
+                    </h2>
+                </div>
+                <div class="row pre-row">
+                    <div class="col-12 pre-col all-head-contant">
+                        <div class="hometesti">
+                            <section class="productCarousel"
+                                                data-list-name="{{list}}"
+                                                data-slick='{
+                                                    "infinite": false,
+                                                    "mobileFirst": true,
+                                                    "dots": false,
+                                                    "slidesToShow": 3,
+                                                    "slidesToScroll": 2,
+                                                    "prevArrow": "{{#if customArrowClass}}.{{customArrowClass}}{{/if}}.js-product-prev-arrow-testi",
+                                                    "nextArrow": "{{#if customArrowClass}}.{{customArrowClass}}{{/if}}.js-product-next-arrow-testi",
+                                                    "responsive": [
+                                                        {
+                                                            "breakpoint": 1409,
+                                                            "settings": {
+                                                                "slidesToShow": 3,
+                                                                "slidesToScroll": 1
+                                                            }
+                                                        },
+                                                        {
+                                                            "breakpoint": 1200,
+                                                            "settings": {
+                                                                "slidesToShow": 3,
+                                                                "slidesToScroll": 1
+                                                            }
+                                                        },
+                                                        {
+                                                            "breakpoint": 800,
+                                                            "settings": {
+                                                                "slidesToShow": 3,
+                                                                "slidesToScroll": 1
+                                                            }
+                                                        },
+                                                        {
+                                                            "breakpoint": 767,
+                                                            "settings": {
+                                                                "slidesToShow": 2,
+                                                                "slidesToScroll": 1
+                                                            }
+                                                        },
+                                                        {
+                                                            "breakpoint": 575,
+                                                            "settings": {
+                                                                "slidesToShow": 2,
+                                                                "slidesToScroll": 1
+                                                            }
+                                                        },
+                                                        {
+                                                            "breakpoint": 425,
+                                                            "settings": {
+                                                                "slidesToShow": 1,
+                                                                "slidesToScroll": 1
+                                                            }
+                                                        },
+                                                        {
+                                                            "breakpoint": 0,
+                                                            "settings": {
+                                                                "slidesToShow": 1,
+                                                                "slidesToScroll": 1
+                                                            }
+                                                        }
+                                                    ]
+                                                }'
+                                            > 
+                                <div class="col-12 pre-col">
+                                    <div class="testi-box box1">
+                                        <svg width="20px" height="20px"><use xlink:href="#quote"></use></svg>
+                                        <div class="testi-contant">
+                                            <p class="testi-description">{{theme_settings.testimonial-contant1}}</p>
+                                            <p class="testi-description">{{theme_settings.testimonial-contant2}}</p>
+                                        </div>
+                                        <div class="author-detail">
+                                            <div class="img-deat">
+                                                <img class="img-fluid center-block timg lazyload" data-sizes="auto" src="{{cdn '/assets/img/loading.svg'}}" data-src="/product_images/uploaded_images/{{theme_settings.testiimgfirst}}" width="78px" height="78px" alt="banner"  />
+                                            </div>
+                                            <div class="testi-detail">
+                                                <h2>{{theme_settings.testimonial-name}}</h2>
+                                                <h3>{{theme_settings.testimonial-post}}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 pre-col">
+                                    <div class="testi-box box2">
+                                        <svg width="20px" height="20px"><use xlink:href="#quote"></use></svg>
+                                        <div class="testi-contant">
+                                            <p class="testi-description">{{theme_settings.second-testimonial-contant1}}</p>
+                                            <p class="testi-description">{{theme_settings.second-testimonial-contant2}}</p>
+                                        </div>
+                                        <div class="author-detail">
+                                            <div class="img-deat">
+                                                <img class="img-fluid center-block timg lazyload" data-sizes="auto" src="{{cdn '/assets/img/loading.svg'}}" data-src="/product_images/uploaded_images/{{theme_settings.testiimgsecond}}" width="78px" height="78px" alt="banner"  />
+                                            </div>
+                                            <div class="testi-detail">
+                                                <h2>{{theme_settings.second-testimonial-name}}</h2>
+                                                <h3>{{theme_settings.second-testimonial-post}}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 pre-col">
+                                    <div class="testi-box box3">
+                                        <svg width="20px" height="20px"><use xlink:href="#quote"></use></svg>
+                                        <div class="testi-contant">
+                                            <p class="testi-description">{{theme_settings.third-testimonial-contant1}}</p>
+                                            <p class="testi-description">{{theme_settings.third-testimonial-contant2}}</p>
+                                        </div>
+                                        <div class="author-detail">
+                                            <div class="img-deat">
+                                                <img class="img-fluid center-block timg lazyload" data-sizes="auto" src="{{cdn '/assets/img/loading.svg'}}" data-src="/product_images/uploaded_images/{{theme_settings.testiimgthird}}" width="78px" height="78px" alt="banner"  />
+                                            </div>
+                                            <div class="testi-detail">
+                                                <h2>{{theme_settings.third-testimonial-name}}</h2>
+                                                <h3>{{theme_settings.third-testimonial-post}}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 pre-col">
+                                    <div class="testi-box box4 ">
+                                        <svg width="20px" height="20px"><use xlink:href="#quote"></use></svg>
+                                        <div class="testi-contant">
+                                            <p class="testi-description">{{theme_settings.fourth-testimonial-contant1}}</p>
+                                            <p class="testi-description">{{theme_settings.fourth-testimonial-contant2}}</p>
+                                        </div>
+                                        <div class="author-detail">
+                                            <div class="img-deat">
+                                                <img class="img-fluid center-block timg lazyload" data-sizes="auto" src="{{cdn '/assets/img/loading.svg'}}" data-src="/product_images/uploaded_images/{{theme_settings.testiimgfourth}}" width="78px" height="78px" alt="banner"  />
+                                            </div>
+                                            <div class="testi-detail">
+                                                <h2>{{theme_settings.fourth-testimonial-name}}</h2>
+                                                <h3>{{theme_settings.fourth-testimonial-post}}</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                                 
+                            </section>
+                            <div class="all-btn recent-post">
+                                <button aria-label="{{lang 'carousel.arrowAriaLabel'}} {{products.length}}" class="{{#if customArrowClass}}{{customArrowClass}} {{/if}}js-product-prev-arrow-testi slick-prev slick-arrow"><svg width="38px" height="26px"><use xlink:href="#arrow-left"></use></svg></button>
+
+                                <button aria-label="{{lang 'carousel.arrowAriaLabel'}} {{products.length}}" class="{{#if customArrowClass}}{{customArrowClass}} {{/if}}js-product-next-arrow-testi slick-next slick-arrow"><svg width="38px" height="26px"><use xlink:href="#arrow-right"></use></svg></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/if}}

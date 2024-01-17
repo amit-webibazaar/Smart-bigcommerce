@@ -25,21 +25,125 @@ blog:
         {{> components/common/alert/alert-info message}}
     {{/each}}
 
+{{#if theme_settings.theme_electronics}}
 <div class="main full">
+    {{> components/common/home-cate}}
+
+    {{#if products.new}}
+        {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+    {{/if}}
+    {{{region name="home_below_new_products"}}}
+
+    {{> components/cms/offerbanner}}
+    
     {{#if products.featured}}
         {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
     {{/if}}
     {{{region name="home_below_featured_products"}}}
+
+    {{> components/cms/salebanner}}
+
+    {{> components/cms/testimonial}}
 
     {{#if products.top_sellers}}
         {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
     {{/if}}
     {{{region name="home_below_top_products"}}}
 
-    {{#if products.new}}
-        {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+    {{#if blog.recent_posts}}
+        {{> components/blog/newblog blog=blog.recent_posts}}
     {{/if}}
-    {{{region name="home_below_new_products"}}}
 </div>
+{{else}} 
+ {{#if theme_settings.theme_health}}
+    <div class="main full">
+        {{> components/cms/salebanner}}
+
+        <div class="section-spacing">
+            {{> components/cms/services}}
+        </div>
+
+        {{> components/common/home-cate}}
+
+        {{#if products.new}}
+            {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+        {{/if}}
+        {{{region name="home_below_new_products"}}}
+
+        {{> components/cms/offerbanner}}
+        
+        {{#if products.featured}}
+            {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+        {{/if}}
+        {{{region name="home_below_featured_products"}}}
+
+
+        {{> components/cms/testimonial}}
+
+        {{#if products.top_sellers}}
+            {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+        {{/if}}
+        {{{region name="home_below_top_products"}}}
+
+        {{#if blog.recent_posts}}
+            {{> components/blog/newblog blog=blog.recent_posts}}
+        {{/if}}
+    </div>
+{{else}}
+{{#if theme_settings.theme_sports}}
+    <div class="main full">
+        <div class="section-spacing">
+            {{> components/cms/services}}
+        </div>
+
+        {{> components/cms/offerbanner}}
+
+        {{> components/common/home-cate}}
+
+        {{#if products.new}}
+            {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+        {{/if}}
+        {{{region name="home_below_new_products"}}}
+
+        
+        
+        {{#if products.featured}}
+            {{> components/products/featured products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+        {{/if}}
+        {{{region name="home_below_featured_products"}}}
+
+        {{> components/cms/salebanner}}
+
+        {{> components/cms/testimonial}}
+
+        {{#if products.top_sellers}}
+            {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+        {{/if}}
+        {{{region name="home_below_top_products"}}}
+
+        {{#if blog.recent_posts}}
+            {{> components/blog/newblog blog=blog.recent_posts}}
+        {{/if}}
+    </div>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var headerElements = document.getElementsByClassName('theme_sport_header');
+            var marginTopValue;
+            if (headerElements.length > 0) {
+                var headerHeight = headerElements[0].offsetHeight;
+                marginTopValue = -headerHeight + 'px';
+                console.log('Height of element with class "header":', marginTopValue, 'pixels');
+            } else {
+                console.error('No elements with class "header" found');
+            }
+            var otherClassElement = document.querySelector('.default.theme_sports .body');
+            if (otherClassElement) {
+                otherClassElement.style.marginTop = marginTopValue;
+            } 
+        });
+    </script>
+{{/if}}
+{{/if}}
+{{/if}}
 {{/partial}}
 {{> layout/base}}

@@ -15,7 +15,49 @@
 //
 // Shared styles for sub page navigation
 // -----------------------------------------------------------------------------
-
+.header-menu--category .custom-header-page{
+    display: none;
+}
+.header-menu--pages .navPages-item{
+    display: none;
+}
+// css for pages menu style
+.header-menu--pages .custom-header-page{
+    display: unset;
+}
+.header-menu--pages .custom-header-page .navPages-action{
+    display: none!important;
+}
+.header-menu--pages .custom-header-page .navPage-subMenu, .header-menu--pages .custom-header-page .navPage-subMenu .navPages-action{
+    display: block!important;
+}
+.header-menu--pages .custom-header-page .navPage-subMenu{
+    position: unset;
+    background-color: transparent;
+    padding: 0px!important;
+    border: none;
+    box-shadow: unset;
+}
+.header-menu--pages .custom-header-page .navPage-subMenu .navPages-item{
+    background-color: transparent!important;
+    display: inline-block;
+    padding: 15px 20px 15px 20px;
+}
+.header-menu--pages .custom-header-page .navPage-subMenu .navPages-item .navPages-action{
+    padding: 0px!important;
+    font-size: 16px;
+}
+.custom-header-page .navPage-subMenu .navPages-item{
+    display: block;
+    float: none;
+}
+.custom-header-page .navPage-subMenu .navPages-item .navPages-action{
+    padding: 0px 0 10px 0px!important;
+    font-size: 14px;
+}
+.custom-header-page .navPage-subMenu{
+    width: auto;
+}
 %navPage-childList {
     border-left: 1px solid $navPage-childList-borderColor;
     margin: spacing("quarter") spacing("half");
@@ -36,27 +78,17 @@
 // -----------------------------------------------------------------------------
 
 .navPages-container {
-    bottom: 0;
-    display: none;
-    height: 100%;
-    left: 0;
-    -webkit-overflow-scrolling: touch;
-    position: absolute;
-    right: 0;
-    z-index: zIndex("lower");
+   
 
     @include breakpoint("medium") {
         background: transparent;
         display: block;
         height: auto;
         padding: 0;
-        position: relative;
+        position: unset;
     }
 
     &.is-open {
-        display: block;
-        padding-top: $header-height;
-        z-index: 0;
     }
 }
 
@@ -65,13 +97,13 @@
 // -----------------------------------------------------------------------------
 
 .navPages {
-    background-color: $navPages-backgroundColor;
+   
     height: 100%;
     overflow-y: auto;
     padding: spacing("single");
 
     @include breakpoint("medium") {
-        @include grid-row(); // 1
+        
         @include nav($style: "navBar", $wrapper: "nav");
         background: none;
         font-size: 0; // 1
@@ -86,7 +118,7 @@
 
     .navPage-subMenu-list {
         @extend %navPage-childList;
-
+        
         border-left: 0;
         list-style: none;
         margin-left: 0;
@@ -97,16 +129,35 @@
             border-left: 0;
             margin: auto;
             padding-left: 0;
+            max-width: 100%;
         }
     }
 }
-
+.navPages-list-pages{
+    border-top: none!important;
+    margin-top: 0!important;
+    padding-top: 0!important;
+    float: right!important;
+}
+.navPages-list-pages .navPages-action{
+    padding: 10px 0px 15px 20px;
+}
+.navPages-list-pages .navPages-item-page .navPages-action::after{
+    content: "|";
+    color: stencilColor("color-secondaryDarker");
+    display: inline-block;
+    width: 0;
+    height: auto;
+}
+.navPages-list-pages .navPages-item-page:last-child .navPages-action::after{
+    display: none;
+}
 .navPages-list {
     margin: 0;
 
     @include breakpoint("medium") {
         display: inline-block;
-        float: none;
+        float: left;
     }
 
     + .navPages-list {
@@ -153,7 +204,7 @@
 
     .navPages-action-moreIcon {
         border: solid 1px $navPages-action-moreIcon-borderColor;
-        border-radius: 4px;
+        border-radius: 0px;
         float: left;
         height: 35px;
         margin-top: -10px;
@@ -186,19 +237,16 @@
 .navPages-action {
     color: stencilColor("navPages-color");
     display: block;
-    font-size: fontSize("smaller");
-    font-weight: fontWeight("bold");
-    padding: spacing("half") 0;
+    font-size: 16px;
+    font-weight: 500;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    line-height: normal;
+    padding: 10px 20px 15px 0px;
+    transition: .3s ease;
 
     @include breakpoint("medium") {
         display: inline-block;
-        padding: spacing("half") (spacing("half") + spacing("quarter")) (spacing("half") + spacing("quarter"));
-
-        &.is-open {
-            background-color: $navPage-subMenu-item--is-highlighted-background;
-        }
     }
 
     &.has-subMenu {
@@ -219,11 +267,11 @@
 
     &:hover,
     &.activePage {
-        color: $navPage-subMenu-item--is-highlighted-color;
+        color: stencilColor("navPages-color-hover");
 
         svg {
-            fill: $navPage-subMenu-item--is-highlighted-color;
-            stroke: $navPage-subMenu-item--is-highlighted-color;
+            fill: stencilColor("color-textBase--hover");
+            stroke: stencilColor("color-textBase--hover");
         }
     }
 
@@ -233,7 +281,24 @@
         transition: all 0.15s ease;
     }
 }
-
+.navPage-subMenu-item{
+    .navPage-subMenu-action{
+        color: stencilColor("color-textBase");
+        &:hover{
+            color: stencilColor("color-textBase--hover");
+        }
+    }
+    .navPage-childList{
+        .navPage-childList-item{
+            .navPage-childList-action{
+                color: stencilColor("color-textBase");
+                &:hover{
+                    color: stencilColor("color-textBase--hover");
+                }
+            }
+        }
+    }
+}
 .navPages-action--storeCredit {
     color: stencilColor("color-textSecondary");
 }
@@ -266,7 +331,7 @@
 
         @include breakpoint("medium") {
             @include square(8px);
-            margin: 0 0 0 spacing("half");
+            margin: 0 0 0 5px;
         }
     }
 }
@@ -304,30 +369,35 @@
 // 1. navBar mixin has lots of decendant child selectors to deal with
 //
 // -----------------------------------------------------------------------------
-
+.custom-header-page .navPage-subMenu {
+    width: auto;
+    position: absolute;
+    left: auto;
+    right: auto;
+}
 .navPage-subMenu {
     display: none;
     outline: 0;
 
     @include breakpoint("medium") {
         background-color: stencilColor("navPages-subMenu-backgroundColor");
-        padding: spacing("single") spacing("single") (spacing("single") + spacing("half")) !important;
+        padding: 15px 15px !important;
         position: absolute;
+        left: 0;
+        right: 0;
         text-align: left;
+        border-radius: 0px 0px 8px 8px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, .18%);
+        border-bottom: 3px solid stencilColor("color-textBase");
 
         &.is-open {
-            display: block;
             left: 0;
-            width: 100%;
+            width: 100% !important;
         }
 
         .navPages-action-moreIcon {
             display: none;
         }
-    }
-
-    &.is-open {
-        display: block;
     }
 
     .navPages-list:not(.navPages-list-depth-max) .navPages-action.has-subMenu + & {
@@ -379,15 +449,15 @@
     @include breakpoint("medium") {
         @include grid-column(3);
         padding: 0 0.75rem !important; // 1
-
+        width: 25%;
         .navPages-action {
-            text-transform: none;
+            text-transform: capitalize;
             width: 100%;
         }
 
         > .navPage-subMenu-action {
-            border-bottom: 1px solid stencilColor("navPages-subMenu-separatorColor");
-            margin-bottom: spacing("half") + spacing("quarter");
+            
+            margin-bottom: 10px;
         }
     }
 }
@@ -407,6 +477,7 @@
 
 .navPage-subMenu-action {
     padding: spacing("half") 0;
+    text-transform: capitalize!important;
 
     @include breakpoint("medium") {
         padding: spacing("half") 0 (spacing("half") + spacing("quarter"));
@@ -416,7 +487,7 @@
         padding: 0 0 0 spacing("single");
 
         @include breakpoint("medium") {
-            padding: spacing("half") 0 (spacing("half") + spacing("quarter"));
+            padding: 0!important;
         }
     }
 
@@ -425,7 +496,9 @@
         display: inline-block;
         height: 100%;
         text-align: right;
-        width: 100%;
+       
+        right: 0;
+        left: auto;
 
         @include breakpoint("medium") {
             display: none;
@@ -439,7 +512,9 @@
 // -----------------------------------------------------------------------------
 .navPage-childList-action {
     font-weight: fontWeight("normal");
-    padding: 0 0 spacing("quarter");
+    padding: 0 0 8px!important;
+    text-transform: capitalize;
+    font-size: 15px;
 }
 
 
@@ -493,5 +568,190 @@
         a {
             padding: spacing("half") spacing("single");
         }
+    }
+}
+@media(min-width: 801px){
+    .navPages-item:hover .navPage-subMenu {
+        display: block;
+    }
+    .fixed .navPage-subMenu{
+        top: 45px;
+    }
+    .navPages-container {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    -webkit-overflow-scrolling: touch;
+    right: 0;
+    }
+}
+@media(min-width: 800px){
+    .cate-navlg{
+        position: unset;
+    }
+    .navPage-subMenu {
+        width: 100%;
+    }
+    .mobile-pages{
+        display: none;
+    }
+}
+@media(min-width: 1199px){
+    .navPage-subMenu {
+        width: 100%;
+    }
+}
+@media(min-width: 1350px){
+    .navPage-subMenu {
+        width: 100%;
+    }
+}
+@media(min-width: 1409px){
+    .navPage-subMenu {
+        width: 100%;
+    }
+}
+@media (max-width: 800px){
+    .navPages-container{
+        height: 100%;
+        width: 100%;
+        transform: translate(-100%);
+        position: fixed;
+        z-index: 999999;
+        top: auto;
+        left: 0;
+        transition: 0.5s;
+        padding-top: 60px;
+        overflow-x: hidden;
+        box-shadow: 5px 0 5px 0 rgba(0, 0, 0, .06);
+        clear: both;
+        height: 100%;
+        background-color: #fff;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+    .desktop-pages{
+        display: none;
+    }
+    .navPage-childList {
+        transform: translate(100%);
+        visibility: hidden;
+        outline: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+        height: 100vh;
+        margin: 0;
+
+        @include breakpoint("medium") {
+            border: 0;
+            display: block;
+        }
+
+        &.is-open {
+            transform: translate(0);
+            visibility: visible;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: #fff;
+            z-index: 1;
+            display: block;
+            margin-left: 0!important;
+            padding: 0;
+        }
+
+    }
+    .navPage-subMenu {
+        transform: translate(100%);
+        visibility: hidden;
+        outline: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        left: 0;
+        height: 100vh;
+
+
+        @include breakpoint("medium") {
+            // scss-lint:disable ImportantRule
+            background-color: stencilColor("navPages-subMenu-backgroundColor");
+            padding: 15px 5px !important;
+            position: absolute;
+            text-align: left;
+
+            .navPages-action-moreIcon {
+                display: none;
+            }
+        }
+
+        &.is-open {
+            transform: translate(0);
+            visibility: visible;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: #fff;
+            z-index: 1;
+            display: block;
+        }
+    }
+    .mobile-currency .navPage-subMenu-item{
+        padding: 0!important;
+    }
+    .mobile-currency .navPage-subMenu-item img{
+        display: inline-block;
+    }
+    .navPage-childList-item{
+        float: none;
+        display: block;
+        text-align: left;
+        padding: 0 15px!important;
+    }
+    .navPages .navPage-subMenu-list {
+        margin: 15px!important;
+    }
+    .navPages .navPage-subMenu-list .navPage-childList .navPage-childList-item{
+        margin: 15px 0px;
+    }
+    .navPage-subMenu-item {
+        margin-right: 0!important;
+        padding: 10px 0!important;
+    }
+    .navPages-container.is-open {
+        left: 0px;
+        right: 0px;
+        transform: translate(0);
+    }
+    .navPage-subMenu-item img{
+        display: none;
+    }
+    .navPages-action{
+        color: stencilColor("color-white");
+    }
+    .navPages-action svg{
+        fill: stencilColor("color-white");
+        stroke: stencilColor("color-white");
+    }
+    .navPages .navPage-subMenu-list, .navPage-childList{
+        border: none;
+    }
+    .navPage-subMenu{
+        width: 100%;
+    }
+    
+    .navPages-list:not(.navPages-list-depth-max) .navPages-action-moreIcon{
+        right: 0;
+        left: auto;
+    }
+    .custom-header-page .navPage-subMenu{
+        position: unset;
     }
 }

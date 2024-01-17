@@ -18,13 +18,15 @@
 
         &:hover {
             svg {
-                fill: stencilColor("icon-color-hover");
+                fill: stencilColor("color-textBase--hover");
             }
         }
 
         svg {
-            fill: stencilColor("icon-color");
+            fill: stencilColor("footer-textColor");
             transition: all 0.15s ease;
+            border-radius: 0px;
+            
         }
     }
 }
@@ -36,14 +38,21 @@
 .pin_it_iframe_widget {
     display: none;
 }
-
+.blog-post-body .socialLinks-item .socialLinks__link{
+    background: none;
+    padding: 0;
+}
+.blog-post-body .socialLinks .socialLinks-item{
+    margin-left: 0;
+}
 .socialLinks-item {
     display: inline-block;
     font-size: 0; // 1
 
     .socialLinks & { // 2
-        margin-bottom: spacing("quarter");
-        margin-right: spacing("half");
+        margin-bottom: 0;
+        margin-right: 10px;
+        width: 32px;
 
         &:last-child {
             margin-right: 0;
@@ -54,6 +63,11 @@
         @include addFocusTooltip;
         height: 2rem;
         position: relative;
+        height: 32px;
+        width: 32px;
+        padding: 9px;
+        background: stencilColor("button--primary-backgroundColor");
+        border-radius: 8px;
 
         // moving tooltip on the left side for avoiding by parent's cut with overflow: hidden
         &:focus::after {
@@ -63,7 +77,9 @@
         }
     }
 }
-
+.socialLinks-item .socialLinks__link:hover{
+    background: stencilColor("button--primary-backgroundColorHover");
+}
 
 //
 // Alternate social link styles
@@ -76,5 +92,27 @@
 
     svg {
         fill: $socialLinks-alt-iconColor;
+    }
+}
+
+@media(max-width: 768px){
+    .socialLinks .socialLinks-item{
+        margin-left: 5px;
+    }
+}
+@media(max-width: 600px){
+    .productView-details .socialLinks{
+        margin: 0!important;
+    }
+}
+@media(max-width: 425px){
+    .product-add-wishlist{
+        width: 100%!important;
+    }
+    .social-share-productpage{
+        width: 100%!important;
+    }
+    .productView-details .socialLinks{
+        text-align: left!important;
     }
 }

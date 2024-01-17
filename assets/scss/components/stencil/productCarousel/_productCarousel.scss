@@ -7,16 +7,14 @@
 // 1. If there's no JS layout the products out based on the grid.
 //
 // -----------------------------------------------------------------------------
-
 .productCarousel {
     @include grid-row(
         $behavior: nest
     ); // 1
     min-width: 100%;
     position: relative;
-    width: 1px;
+    width: auto;
 }
-
 .productCarousel-slide { // 1
     @include grid-column(6);
 
@@ -33,10 +31,22 @@
     }
 
     .card {
-        margin-bottom: 0;
+        border: none;
+        border-radius: 10px;
+        background: stencilColor("Content_Backround_Color");
 
         .card-title {
             overflow-wrap: break-word;
         }
+    }
+}
+@media(max-width: 991px){
+    .productCarousel-slide{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .productCarousel{
+        margin-left: -5px;
+        margin-right: -5px;
     }
 }

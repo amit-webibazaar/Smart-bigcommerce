@@ -13,3 +13,9 @@
         padding: spacing("single") + spacing("third");
     }
 }
+.wishlist .panel-body{
+    border-radius: 10px;
+}
+.wishlist .panel-body .form-input{
+    border: 1px solid stencilColor("input-border-color-active")!important;
+}

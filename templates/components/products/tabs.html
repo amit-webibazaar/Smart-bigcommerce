@@ -1,26 +1,45 @@
-<ul class="tabs" data-tab role="tablist">
-    {{#if product.related_products}}
-        <li class="tab is-active" role="presentation">
-            <a class="tab-title" href="#tab-related" role="tab" tabindex="0" aria-selected="true" controls="tab-related">{{lang 'products.related_products'}}</a>
-        </li>
-    {{/if}}
-    {{#if product.similar_by_views}}
-        <li class="tab{{#unless product.related_products}} is-active{{/unless}}" role="presentation">
-            <a class="tab-title" href="#tab-similar" role="tab" tabindex="0" aria-selected="{{#if product.related_products}}false{{else}}true{{/if}}" controls="tab-similar">{{lang 'products.similar_by_views'}}</a>
-        </li>
-    {{/if}}
-</ul>
-
-<div class="tabs-contents">
+{{#if theme_settings.related_products}}
 {{#if product.related_products}}
-    <div role="tabpanel" aria-hidden="false" class="tab-content has-jsContent is-active" id="tab-related">
-        {{> components/products/carousel products=product.related_products columns=6 list="Related Products"}}
+<div class="section-spacing">
+    <div class="realted">
+        <div class="container myheadeing">
+            <div class="all-head">
+                <h2 class="page-heading">
+                    {{lang 'products.related_products'}}
+                    <p>{{theme_settings.subheading-related-product}}</p>
+                    <span class="head-line"></span>
+                </h2>
+            </div>
+            <div class="has-jsContent next-prevb" id="tab-related">
+                {{#if settings.data_tag_enabled}}
+                    {{> components/products/related-carousel products=product.related_products columns=6 customArrowClass='js-related-product-arrow' list="Related Products"}}
+                {{else}}
+                    {{> components/products/related-carousel products=product.related_products columns=6 customArrowClass='js-related-product-arrow'}}
+                {{/if}}
+            </div>
+        </div>
     </div>
+</div>
+{{/if}}
 {{/if}}
 
+{{#if theme_settings.similar_by_views}}
 {{#if product.similar_by_views}}
-    <div role="tabpanel" aria-hidden="{{#if product.related_products}}true{{else}}false{{/if}}" class="tab-content has-jsContent{{#unless product.related_products}} is-active{{/unless}}" id="tab-similar">
-        {{> components/products/carousel products=product.similar_by_views columns=6 list="Customers Also Viewed"}}
+<div class="section-spacing">
+    <div class="also-view">
+        <div class="container myheadeing">
+            <div class="all-head">
+                <h2 class="page-heading">
+                    {{lang 'products.similar_by_views'}}
+                    <p>{{theme_settings.subheading-similar-product}}</p>
+                    <span class="head-line"></span>
+                </h2>
+            </div>
+            <div id="tab-similar" class="next-prevb">
+                {{> components/products/also-viewed-carousel products=product.similar_by_views columns=6 list="Customers Also Viewed" customArrowClass='js-viewed-product-arrow' }}
+            </div>
+        </div>
     </div>
-{{/if}}
 </div>
+{{/if}}
+{{/if}}

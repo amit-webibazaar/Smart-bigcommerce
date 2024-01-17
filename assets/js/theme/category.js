@@ -3,6 +3,8 @@ import CatalogPage from './catalog';
 import compareProducts from './global/compare-products';
 import FacetedSearch from './common/faceted-search';
 import { createTranslationDictionary } from '../theme/common/utils/translations-utils';
+import ProductDetails from './common/product-details';
+import productOptionGraphql from './set-product-option-with-graphql';
 
 export default class Category extends CatalogPage {
     constructor(context) {
@@ -80,6 +82,7 @@ export default class Category extends CatalogPage {
                 sidebar: 'category/sidebar',
             },
             showMore: 'category/show-more',
+
         };
 
         this.facetedSearch = new FacetedSearch(requestOptions, (content) => {
@@ -91,6 +94,9 @@ export default class Category extends CatalogPage {
             $('html, body').animate({
                 scrollTop: 0,
             }, 100);
+
+console.log(this.context)
+            productOptionGraphql(this.context)
         }, {
             validationErrorMessages: {
                 onMinPriceError,

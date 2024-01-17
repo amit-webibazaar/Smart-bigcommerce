@@ -1,0 +1,938 @@
+
+input:focus+label {
+    outline: none !important;
+}
+input:focus{
+    outline: none !important;
+}
+.theme_sports .button--primary{
+    border-color: stencilColor("button--primary-color");
+}
+.theme_sports .cate-ti{
+    position: unset;
+    padding: 10px 0px 0px 0px;
+}
+.theme_sports .topmenuwithclose{
+    background-color: stencilColor("primary-background-color");
+}
+.theme_sports #search .wb-search-btn {
+    background: stencilColor("primary-background-color");
+}
+// slider arrow buttons
+.theme_sports .all-btn{
+    position: unset;
+    margin-top: 30px;
+}
+.theme_sports .slick-next, .theme_sports .slick-prev{
+    position: unset;
+    transform: unset;
+    display: inline-block;
+}
+// sections headings
+.theme_sports.default .page-heading, .theme_sports.product .page-heading{
+    text-align: center;
+}
+.theme_sports .head-line::before{
+    left: 0;
+    right: 0;
+}
+.theme_sports .mobile-pages{
+    display: unset;
+}
+.default.theme_sports .header{
+    background: transparent;
+}
+// second layout header css
+.theme_sports .my-custom-sidenav .navUser-action svg {
+    height: auto;
+}
+.theme_sports .webi-subscribe{
+    width: 100%;
+}
+.theme_sports .webi-subscribe .footer-info-heading{
+    display: none;
+}
+.theme_sports .newslatter-footer{
+    background-color: transparent;
+}
+.theme_sports .webi-subscribe p{
+    color: stencilColor("footer-textColor");
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    display: block;
+}
+.theme_sports .header-logo--left .head-contact{
+    order: 2;
+    text-align: center;
+}
+.theme_sports .header-logo--left .head-icons{
+    order: 3;
+}
+// Home product section header and cards css
+.theme_sports .countdown p{
+    margin-right: 0px;
+    margin-left: 10px;
+}
+.theme_sports .all-head{
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    height: unset;
+    min-height: unset;
+    position: unset;
+}
+.theme_sports .new-pro{
+    align-items: center;
+}
+.theme_sports .foot-copy .socialLinks--alt .icon{
+    border-radius: 0px;
+}
+.automotive-header-bottom{
+    background-color: stencilColor("bottom-header-backgroundColor");
+}
+.theme_sports .mycustom-container .navPages-action svg{
+    fill: stencilColor("color-textBase");
+    stroke: stencilColor("color-textBase");
+}
+.theme_sports .mycustom-container .navPages-action:hover svg{
+    fill: stencilColor("color-textBase--hover");
+    stroke: stencilColor("color-textBase--hover");
+}
+.theme_sports .second-head {
+    padding: 0px 0px;
+}
+.theme_sports .card-figcaption-button{
+    margin: 0 0 0 0;
+    background-color: stencilColor("product-button-backgroundColor");
+}
+.theme_sports .card-figcaption-button:hover {
+    background-color: stencilColor("product-button-backgroundColorHover");
+}
+.theme_sports .card-figcaption-button:hover svg {
+    fill:  stencilColor("color-white") !important;
+}
+.theme_sports .head-icons .desktop-search{
+    padding: 0 0 0 20px;
+}
+// card design
+
+// salebanner design
+.theme_sports .off-img-first-col, .theme_sports .off-img-three{
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.theme_sports .off-img-thired-col{
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-top: 30px; 
+}
+// salebanner design end
+.theme_sports .price-variant, .theme_sports .title-rating{
+    display: block;
+}
+.theme_sports .card-title, .theme_sports .card-text.card-rating, .theme_sports .card-text.myprice, .theme_sports .card-product-swatch{
+    width: 100%;
+}
+.theme_sports .card-rating .rating--small{
+    text-align: left;
+}
+.theme_sports .product-brandname{
+    padding-bottom: 5px;
+    color: stencilColor("color-textBase");
+}
+.theme_sports article .wb-list-product-reviews .avg-rate{
+    width: 100%;
+    height: auto;
+    text-align: left;
+}
+.theme_sports article .wb-list-product-reviews .or-rate {
+    opacity: 1;
+    transform: unset;
+}
+.theme_sports article .fa.fa-star.emstar, .theme_sports article .rate-tot{
+    display: none;
+}
+.theme_sports .card-product-swatch .custom-swatch-form-field{
+    justify-content: left;
+}
+.theme_sports .card-product-swatch{
+    padding-top: 10px;
+}
+.theme_sports .pagination-list li a, .theme_sports .pagination-list li button, .theme_sports .pagination-item.pagination-item--current{
+    border-radius: 0px;
+}
+// card design end
+.theme_sports .card-figure{
+    border-radius: 0px;
+}
+.theme_sports .card-body .abc{
+    text-align: left;
+    padding: 15px 15px 15px 15px;
+    border-radius: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    background: stencilColor("color-white");
+
+    @include breakpoint("small") {
+        
+    }
+    .product-brandname{
+        display: none;
+    }
+}
+.theme_sports #brand{
+    background: stencilColor("custom-second-background-color");
+}
+// Home category section
+.theme_sports .img-des{
+    background: none;
+}
+.theme_sports .homecategory {
+    align-items: center;
+}
+.theme_sports .home-cate-item{
+    border-top: none;
+}
+.theme_sports .topsp {
+    .slick-slide img{
+        border-radius: 0px;
+    }
+    .cpton-p .cate-ti{
+        border-radius: 10px;
+    }
+    .cate-img:before{
+        border-radius: 10px;
+    }
+    .cate-shop{
+        border-radius: 40px;
+    }
+}
+
+// Home offer banner section
+.theme_sports .features-img-descri{
+    position: absolute;
+    top: 30%;
+    left: 15px;
+    right: 5%;
+    bottom: 0;
+    text-align: left;
+}
+.theme_sports .features-img-descri h1{
+    width: 100%;
+}
+.theme_sports .features-img-descri a{
+    border-radius: 50px;
+}
+// Home testimonial section css
+.theme_sports .testi-box{
+    border: none;
+}
+.test-quote-icon {
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: #001a77;
+    padding: 15px;
+}
+.theme_sports .testi-contant svg{
+    width: 36px;
+    height: 36px;
+    fill: stencilColor("color-white");
+    transform: scale(-1,1);
+    position: unset;
+    opacity: 1;
+}
+.theme_sports .testi-detail {
+    margin-top: 0px;
+}
+// Home blog section css
+.theme_sports .main-b-b{
+    border-radius: 10px;
+}
+.theme_sports .read-more-blog .readmore_link{
+    border-radius: 40px;
+}
+.theme_sports .date-time{
+    border-radius: 8px 0px 8px 0px;
+}
+.theme_sports .webi_post_hover, .theme_sports .webi_post_hover .icon{
+    border-radius: 0px;
+}
+.theme_sports .mynewblog .productCarousel-slide {
+    border-bottom: none;
+}
+// Home footer section css
+.theme_sports .foot-about .socialLinks{
+    text-align: left;
+}
+.theme_sports .webi-subscribe .form-prefixPostfix .button{
+    border-radius: 0px;
+}
+.theme_sports .webi-subscribe .form-prefixPostfix .button:hover{
+    background: stencilColor("button--primary-backgroundColorHover");
+    color: stencilColor("button--primary-colorHover");
+}
+.theme_sports .webi-subscribe .form-field .form-prefixPostfix{
+    border: none;
+}
+.theme_sports #nl_email{
+    height: 45px;
+    border: 1px solid stencilColor("color-textBase");
+    margin-right: 5px;
+    border-radius: 0px!important;
+    border-color: stencilColor("input-border-color")!important;
+}
+
+.theme_sports .foot-phone{
+    border-radius: 5px;
+}
+.theme_sports .foot_store_icons li,.theme_sports .foot-social .socialLinks--alt .icon{
+    border-radius: 50px;
+}
+// Other page css
+.theme_sports .productList .card-body .abc{
+    background: 0;
+}
+.theme_sports .productList .card-figcaption-button{
+    margin: 0;
+}
+
+.theme_sports .add-cart{
+    margin-bottom: 0px;
+}
+.theme_sports .productList .card-figure {
+    border-radius: 10px 0 0 10px;
+}
+.theme_sports .realted,.theme_sports .also-view{
+    align-items: center;
+}
+.theme_sports .catename:hover{
+    color: stencilColor("color-textBase--hover");
+}
+.theme_sports .cate-ti .catename:hover::before{
+    border-bottom: 1px solid stencilColor("color-textBase--hover");
+}
+.theme_sports .sale-flag-sash, .theme_sports .sold-out-flag-sash{
+    border-radius: 20px;
+}
+.theme_sports .off-img-second,.theme_sports .off-img-fifth{
+    padding-top: 20px;
+}
+.theme_sports .np-subscription-form #nl_email{
+    border-radius: 8px!important;
+}
+.theme_sports .heroCarousel ul.slick-dots li.slick-active button, .theme_sports .heroCarousel .slick-dots li button::before{
+    border-radius: 0px;
+}
+.theme_sports .card-figure .second-img, .theme_sports .card-image, .theme_sports .productCarousel-slide .card, .theme_sports .video-img-banner img{
+    border-radius: 0;
+}
+.theme_sports .modal, .theme_sports .account{
+    border-radius: 0px;
+}
+// all theme border radius
+.theme_sports{
+    .form-input,.button,.alertBox,.navBar--sub .navBar-section,.navBar--sub .navBar-item,.panel--address .panel-body,.socialLinks-item .socialLinks__link,
+    .add-to-cart-wrapper .form-increment,.form-option,.productView-rating,.form-option-variant--color, .form-option-variant--pattern,.acd,
+    ol.breadcrumbs,.newsletter_popup .np-inner .np-right .np-subscription-form .form-field .form-prefixPostfix .form-input,.mygift,.navUser-item--wishlist, .blog-body-panal, .blog-thumbnail img, .tag a,
+    .single-blog .socialLinks .icon svg, .allcomment .blog-post-body, .form-select, .account-sidebar-block-border, .login-form{
+        border-radius: 0px!important;
+    }
+}
+.theme_sports {
+    .productView-description,.navUser .dropdown-menu,.cate-border,.actionBar-section .form-field,.actionBar-section .form-select,.category-top,.facetLabel,
+    .category-top img,.productView-thumbnails img,.productView-thumbnail-link,.productView-img-container img,.productView-image .easyzoom-flyout, #currencySelection1.dropdown-menu{
+        border-radius: 0px;
+    }
+}
+.theme_sports .catagory-space .page-sidebar{
+    border-radius: 0px!important;
+}
+.theme_sports .productView .form-wishlist .button.is-open{
+    border-radius: 0px;
+}
+.theme_sports .cart-item-quantity .form-increment .form-input{
+    border-radius: 0px!important;
+}
+.theme_sports {
+    .cart-total .form-select,.theme_sports .cart-total .form-input,.productView-options .product-variant .form-input,.form-checkbox+.form-label::before,
+#recentlyBougthProducts .RB_Items .RB_Item,.ask-an-expert-footer img{
+    border-radius: 0px!important;
+}
+}
+
+.theme_sports .slick-next, .theme_sports .slick-prev, .theme_sports #progress-value, .theme_sports #scroll{
+    border-radius: 0;
+}
+.theme_sports .navList-action--checkbox::before{
+    border-radius: 0px!important;
+}
+.theme_sports #wishlist-dropdown.is-open .button{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.theme_sports .new-customer .panel-header{
+    border-radius: 0px;
+}
+.theme_sports .new-customer .panel-body,.theme_sports .navPage-subMenu{
+    border-radius: 0px;
+}
+.theme_sports #recentlyBougthProducts .RB_Items .RB_Item .RB_close_btn{
+    border-radius: 0px;
+}
+.theme_sports .wb-search .form-input{
+    border-radius: 0px 0 0 0px!important;
+    border: 1px solid #eee!important;
+    padding: 25px;
+}
+.theme_sports .wbSearch .form-input:focus {
+    border: 1px solid #eee!important;
+}
+.theme_sports .wb-search .input-group-btn{
+    right: 7px;
+    top: 4px;
+}
+.theme_sports #search .wb-search-btn{
+    border-radius: 0px;
+    height: 52px;
+    width: 52px;
+    padding: 10px 12px;
+}
+.theme_sports .deliveryinfo svg{
+    fill: stencilColor("color-textBase");
+}
+.theme_sports .deliveryinfo h1, .theme_sports .deliveryinfo p{
+    color: stencilColor("color-textBase");
+}
+.theme_sports .service-bg{
+    padding: 0px;
+    border-bottom: none;
+}
+.theme_sports .deliveryinfo{
+    border: 1px solid stencilColor("custom-border-color");
+    padding: 20px;
+}
+.theme_sports .mycustom-header{
+    padding: 15px 15px!important;
+}
+.theme_sports .custom-header-page .navPage-subMenu .navPages-item .navPages-action{
+    color: stencilColor("color-textBase");
+}
+.theme_sports .custom-header-page .navPage-subMenu .navPages-item .navPages-action:hover{
+    color: stencilColor("color-textBase--hover");
+}
+.theme_sports .navPage-subMenu{
+    top: auto;
+}
+.theme_sports .d-search button:hover svg{
+    stroke: stencilColor("navPages-color-hover");
+}
+.theme_sports .acd .navUser-action svg{
+    fill: stencilColor("color-textBase");
+}
+.theme_sports .mycustom-container .navUser-action svg{
+    fill: stencilColor("color-textBase");
+}
+.theme_sports .mycustom-container .d-search button svg{
+    stroke: stencilColor("color-textBase");
+    &:hover{
+        stroke: stencilColor("color-textBase--hover");
+    }
+}
+.theme_sports .navUser-action:hover svg{
+    fill: stencilColor("navPages-color-hover");
+}
+.theme_sports {
+    .features-img-banner img,.mp_product_list img,.testi-box,.home_instagram_feed_main .home_instagram_feed ul li .IGFeed_link img,
+    .home_instagram_feed_main .home_instagram_feed ul li .IGFeed_link .IGFees_hover{
+        border-radius: 0px;
+    }
+}
+.theme_sports .home_most_popular_products .mp_product_list .mp_inner .product_section .mp-card .mp-action a{
+    border-radius: 0px;
+}
+.theme_sports .card-product-swatch .custom-swatch-form-field .option-swatch{
+    border-radius: 0px;
+    width: 22px;
+    height: 22px;
+}
+.theme_sports .card-product-swatch .custom-swatch-form-field .option-swatch label{
+    border-radius: 0px;
+}
+.theme_sports .productBadges .sale-flag-sash, .theme_sports .productBadges .sale-flag-sash-percentage, .theme_sports .productBadges .sold-out-flag-sash{
+    border-radius: 0;
+}
+.theme_sports .testi-box svg{
+    fill: stencilColor("color-textBase--hover");
+}
+// HERO CAROUSEL
+// -----------------------------------------------------------------------------
+//
+// Purpose: Styles the hero carousel component, which basically adds extras to the
+// vendor slick carousel, to specifically display hero images.
+//
+// 1. Use object-fit on the image tag to keep aspect ratio and cover the space
+//    created by the outer div. The JS will detect browsers that do not support
+//    object-fit and instead copy the image src to a the background-image of the
+//    wrapper div and add the compat-object-fit class.
+//
+// 3. Allows image to scale on large screens while preventing the top and bottom
+//    from becoming cut off.
+// -----------------------------------------------------------------------------
+.theme_sports .ask-an-expert-popup{
+    z-index: 99999999;
+}
+.theme_sports .slidedes {
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+    text-align: center;
+    padding: 0 30px;
+    left: 0;
+}
+.theme_sports .slide-flex {
+    display: flex !important;
+    align-items: center !important;
+    background: none;
+    border: none;
+}
+.theme_sports .slidecap{
+    background: stencilColor("color-white");
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .18%);
+    padding: 13% 0;
+    -ms-flex: 0 0 47%;
+    flex: 0 0 47%;
+    max-width: 47%;
+}
+.theme_sports .heroCarousel .slick-next, .theme_sports .heroCarousel .slick-prev{
+    border-radius: 0px;
+}
+.theme_sports .heroCarousel-content .heroCarousel-action{
+    border-radius: 0px;
+    background-color: stencilColor("button--primary-backgroundColor");
+    border-color: stencilColor("button--primary-color");
+    padding: 15px 15px;
+    font-size: 14px;
+}
+.theme_sports .heroCarousel-content .heroCarousel-action:hover{
+    background-color: stencilColor("button--primary-backgroundColorHover");
+    border-color: stencilColor("button--primary-backgroundColorHover");
+}
+.heroCarousel-slide {
+    position: relative;
+    margin: 0;
+    a {
+        text-decoration: none;
+    }
+
+    &.stretch {
+        .heroCarousel-image {
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+
+        &.compat-object-fit { // 1
+            .heroCarousel-image {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }    
+
+    &.compat-object-fit { // 1
+        overflow: hidden;
+        
+        .heroCarousel-image {
+            width: auto;
+        }
+    }
+
+    .heroCarousel-image-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0;
+    }
+}
+.heroCarousel .slick-current.slick-active .heroCarousel-title,.heroCarousel .slick-current.slick-active .heroCarousel-description{
+    transform: unset;
+}
+.theme_sports .heroCarousel-content{
+    width: 50%;
+}
+.theme_sports .heroCarousel-action{
+    margin: 0;
+
+    @include breakpoint("medium") {
+        margin-top: spacing("single");
+    }
+}
+.theme_sports .social-share-icon-heading{
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.theme_sports .heroCarousel .slick-dots{
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+.theme_sports .heroCarousel .slick-dots li::after{
+    display: none;
+}
+.theme_sports .heroCarousel .slick-dots li{
+    width: auto;
+}
+@media(min-width: 1200px) and (max-width: 1440px){
+    .theme_sports .slidecap{
+        padding: 8% 0;
+    }
+    .theme_sports .navPages-action {
+        padding: 10px 20px 10px 20px!important;
+    }
+}
+@media(min-width: 992px) and (max-width: 1199px){
+    .theme_sports .slidecap{
+        padding: 8% 0;
+    }
+    .theme_sports .navPages-action {
+        padding: 10px 20px 10px 20px!important;
+    }
+    .theme_sports .mycustom-header {
+        padding: 20px 15px !important;
+    }
+}
+@media (min-width: 801px) and (max-width: 991px){
+    
+    .theme_sports .navPages-action {
+        padding: 10px 20px 10px 20px!important;
+    }
+    
+}
+@media(min-width: 768px) and (max-width: 991px){
+    .theme_sports .slidecap{
+        padding: 8% 0;
+    }
+    .theme_sports .heroCarousel-title{
+        font-size: 18px !important;
+        margin-bottom: 0;
+    }
+    .theme_sports .heroCarousel-description{
+        font-size: 14px !important;
+        line-height: 25px;
+        margin: 15px 0;
+    }
+    .theme_sports .theme_sports .heroCarousel-content .heroCarousel-action{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .theme_sports .slidedes{
+        left: 15px !important;
+    }
+    .theme_sports .service-cont:nth-child(1),.theme_sports .service-cont:nth-child(2){
+        margin-bottom: 15px;
+    }
+}
+@media(min-width: 576px) and (max-width: 767px){
+    .theme_sports .off-img-three{
+        display: block;
+    }
+    .theme_sports .heroCarousel-title{
+        font-size: 18px !important;
+        margin-bottom: 0;
+    }
+    .theme_sports .heroCarousel-description{
+        font-size: 14px !important;
+        line-height: 25px;
+        margin: 15px 0;
+    }
+    .theme_sports .heroCarousel-content .heroCarousel-action{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .theme_sports .service-cont:nth-child(1),.theme_sports .service-cont:nth-child(2){
+        margin-bottom: 15px;
+    }
+}
+@media(max-width: 1409px){
+    .theme_sports .heroCarousel-title{
+        font-size: 34px;
+    }
+    
+}
+@media(max-width: 1199px){
+    .theme_sports .myquick-search{
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+    .theme_sports .second-head-icons{
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .theme_sports .webi-subscribe .form-prefixPostfix .button{
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+@media (min-width: 768px){
+    .theme_sports .heroCarousel.slick-vertical .slick-slide{
+        position: sticky;
+        top: 0;
+    }
+    .theme_sports .heroCarousel.slick-vertical .slick-list{
+        overflow: unset;
+        transform: unset;
+        height: 100% !important;
+    }
+    .theme_sports .heroCarousel.slick-vertical .slick-arrow{
+        display: none !important;
+    }
+}
+@media(max-width: 991px){
+    .theme_sports .add-cart {
+        bottom: 15px;
+    }
+    .theme_sports .cpton-p {
+        opacity: 1;
+        border: none;
+    }
+    .theme_sports .footer {
+        margin-top: 60px;
+    }
+    .theme_sports .off-img-thired-col{
+        padding-top: 10px;
+    }
+}
+@media(max-width: 800px){
+    .default.theme_sports .body {
+        margin-top: 0!important;
+    }
+    .theme_sports .desktop-search{
+        display: inline-block;
+    }
+    .theme_sports .d-search {
+        display: block;
+    }
+    .theme_sports .mycustom-header {
+        padding: 0px 15px !important;
+    }
+    .theme_sports .heroCarousel-content {
+        width: 55%;
+    }
+    .theme_sports .newslatter-footer{
+        padding: 0px 0px 0px 0px;
+    }
+    
+    .theme_sports .mycustom-container .mobileMenu-toggle .mobileMenu-toggleIcon, .theme_sports .mycustom-container .mobileMenu-toggle .mobileMenu-toggleIcon::before, .theme_sports .mycustom-container .mobileMenu-toggle .mobileMenu-toggleIcon::after{
+        background: stencilColor("color-textBase"); 
+    }
+    .theme_sports .head-promo-text{
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%; 
+        text-align: center!important;
+    }
+    .theme_sports .heroCarousel-content {
+        width: 50%;
+    }
+    .theme_sports .card-figcaption-button{
+        background-color: stencilColor("secondary-background-color");
+    }
+    .theme_sports .card-body .card-figcaption{
+        margin-top: 10px;
+    }
+    .theme_sports .slidedes{
+        left: 0px !important;
+    }
+    .theme_sports .myquick-search {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .theme_sports .mycustom-header {
+        padding: 0px;
+    }
+    .fashion-search{
+        padding: 0;
+        margin: 0;
+    }
+    .fashion-search .myquick-search{
+        padding: 0 0px 15px 0px;
+    }
+    .theme_sports .wb-search .form-input{
+        padding: 20px;
+    }
+    .theme_sports .wb-search .input-group-btn{
+        right: 4px;
+        top: 4px;
+    }
+    .theme_sports #search .wb-search-btn{
+        height: 45px;
+        padding: 6px 8px;
+    }
+    .theme_sports .header-quick-search{
+        padding: 0;
+    }
+}
+@media(max-width: 767px){
+    
+    .theme_sports .card-figcaption-button {
+        padding: 8px;
+    }
+    .theme_sports .all-cate{
+        order: 2;
+    }
+    .theme_sports .heroCarousel-slide{
+        border: none;
+    }
+    .theme_sports .slideimg::after{
+        content: '';
+        position: absolute;
+        background-color: #000;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.3;
+    }
+    .theme_sports .heroCarousel-title,.theme_sports .heroCarousel-description{
+        color: stencilColor("color-white");
+    }
+    .theme_sports .heroCarousel-slide .heroCarousel-image-wrapper{
+        position: relative;
+    }
+    .theme_sports .heroCarousel .slick-next::before, .theme_sports .heroCarousel .slick-prev::before{
+        height: 14px;
+        width: 14px;
+    }
+    .theme_sports .heroCarousel .slick-prev {
+        left: auto;
+        right: 40px;
+    }
+    .theme_sports .heroCarousel .slick-next {
+        right: 0px;
+    }
+    .theme_sports .heroCarousel .slick-prev::after {
+        content: '';
+        position: absolute;
+        background: stencilColor("custom-border-color");
+        width: 2px;
+        height: 25px;
+        left: 37px;
+        top: 7px;
+    }
+    .theme_sports .slidecap,.theme_sports .slideimg{
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .theme_sports .slidecap{
+        position:absolute;
+        background: 0;
+        box-shadow: none;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media(max-width: 600px){
+    .theme_sports .all-btn{
+        margin-top: 10px;
+    }
+    .theme_sports .footer {
+        margin-top: 30px;
+    }
+    .theme_sports .heroCarousel-content {
+        width: 75%;
+    }
+    .theme_sports .heroCarousel-title{
+        font-size: 16px !important;
+        margin-bottom: 10px;
+    }
+    .theme_sports .heroCarousel-description{
+        display: none;
+    }
+    .top-bar-f a {
+        font-size: 14px;
+    }
+    .theme_sports .features-img-descri {
+        top: 30%;
+        right: 0;
+    }
+    .theme_sports .off-img-one {
+        border-top: none;
+    }
+}
+@media(max-width: 575px){
+    .theme_sports .off-img-thired-col .features-img-descri .automotive-sale-off, .theme_sports .off-img-thired-col .features-img-descri h1{
+        display: none;
+    }
+    .theme_sports .off-img-three{
+        display: block;
+    }
+    .theme_sports .off-img-first-col, .theme_sports .off-img-three{
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .theme_sports .off-img-thired-col{
+        padding-top: 0;
+        margin: 0;
+    }
+    .theme_sports .card-body .card-figcaption {
+        margin-top: 0px;
+    }
+    .theme_sports .heroCarousel-content .heroCarousel-action {
+        font-size: 12px;
+        padding: 8px 8px;
+    }
+    .theme_sports .features-img-descri {
+        top: 20%;
+        width: 50%;
+    }
+    .theme_sports .testi-box .img-deat img{
+        width: 80px;
+        height: 80px;
+    }
+    .theme_sports .img-deat{
+        width: 80px;
+        height: 80px;
+    }
+    .theme_sports .parallax-bg .page-heading{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media(max-width: 550px){
+    .theme_sports .sidebar-recently-view .rv-top,.theme_sports .ask-an-expert-footer svg{
+        border-radius: 50px!important;
+    }
+    .theme_sports .sidebar-recently-view.is-active{
+        background: transparent;
+    }
+}
+@media(max-width: 375px){
+    .theme_sports .features-img-descri {
+        top: 12%;
+    }
+    .automotive-firts-ban-offer{
+        display: none;
+    }
+}
+@media(max-width: 425px){
+    .announcementbar {
+        display: none;
+    }
+}

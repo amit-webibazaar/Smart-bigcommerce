@@ -8,19 +8,23 @@
 
 .account {
     margin-bottom: spacing("single");
+    background: stencilColor("color-white");
+    padding: 15px;
+    border-radius: 10px;
 }
 
 .account--fixed {
     @include breakpoint("medium") {
-        margin: 0 auto;
-        width: grid-calc(8, $total-columns);
+       
     }
 }
-
+.account-sidebar .definitionList{
+    padding-bottom:10px;
+}
 .account--fixedSmall {
+    margin: 30px auto !important;
     @include breakpoint("medium") {
         margin: 0 auto;
-        width: grid-calc(6, $total-columns);
     }
 }
 
@@ -36,17 +40,19 @@
     text-align: center;
 
     .alertBox {
-        padding-left: spacing("double");
         padding-right: spacing("double");
         text-align: left;
     }
 }
 
 .account-body {
+    margin: 0 0 !important;
     @include grid-row($behavior: "nest");
 }
 
 .account-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
     @include grid-column(12);
 }
 
@@ -60,18 +66,29 @@
 .account-content--fixedSmall {
 
     @include breakpoint("medium") {
-        width: grid-calc(6, $total-columns);
+        
     }
 }
 
 .account-sidebar {
-    @include grid-column(12);
-
-    @include breakpoint("medium") {
-        width: grid-calc(4, $total-columns);
-
-        .account-content--fixedSmall + & {
-            float: right;
-        }
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.account-product-figure::after{
+    display: none;
+}
+.form-input{
+    border-radius: 8px!important;
+}
+.form-select{
+    border-radius: 8px;
+}
+.account-sidebar-block .definitionList-value{
+    text-align: end;
+}
+.account-sidebar .account-sidebar-block{
+    margin-bottom: 15px;
+    &:last-child{
+        margin-bottom: 0;
     }
 }

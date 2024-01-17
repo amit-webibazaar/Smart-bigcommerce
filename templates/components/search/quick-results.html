@@ -3,7 +3,7 @@
     <ul class="productGrid" data-list-name="Quick Search Results">
         {{#each product_results.products}}
         <li class="product">
-                {{> components/products/card
+                {{> components/products/quick-card
                         settings=../settings
                         alternate=true
                         show_compare=../show_compare
@@ -20,3 +20,18 @@
         {{{lang 'search.results.quick_count' count=pagination.product_results.total search_query=(sanitize forms.search.query) }}}
     </p>
 {{/if}}
+
+<script>
+     $('.quickSearchResults').on('click', function() {
+        $('.quickSearchResults').fadeOut();
+    });
+
+    $(document).on('click', '.quickSearchResults .modal-close', function() {
+      $('.quickSearchResults').fadeOut();
+    });
+
+    $('.wbSearch .form-input').on('click', function() {
+      $('.quickSearchResults').fadeIn();
+    });
+
+</script>
