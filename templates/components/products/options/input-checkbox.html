@@ -4,7 +4,7 @@
 
         {{> components/common/requireness-msg}}
     </label>
-    <input type="hidden" name="attribute[{{id}}]" value="{{noValue}}" />
+    <input type="hidden" name="attribute[{{id}}]" value="{{noValue}}" aria-label="checkbox"/>
     <div class="form-option-wrapper">
         <input
             class="form-checkbox"
@@ -12,6 +12,7 @@
             name="attribute[{{id}}]"
             id="attribute-check-{{id}}"
             value="{{value}}"
+            aria-label="checkbox"
             {{#if checked}}
                 checked
                 data-default

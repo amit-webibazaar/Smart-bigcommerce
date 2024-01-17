@@ -67,7 +67,7 @@
                 </figure>
                
         
-            <ul class="productView-thumbnails"{{#gt product.images.length 5}} data-slick='{
+            <div class="productView-thumbnails"{{#gt product.images.length 5}} data-slick='{
                 "infinite": false,
                 "mobileFirst": true,
                 "dots": false,
@@ -76,7 +76,7 @@
                 "slidesToScroll": 1
             }'{{/gt}}>
             {{#each product.images}}
-                <li class="productView-thumbnail">
+                <div class="productView-thumbnail">
                     <a
                         class="productView-thumbnail-link"
                         href="{{getImageSrcset this (cdn ../theme_settings.default_image_product) 1x=../theme_settings.zoom_size}}"
@@ -91,16 +91,16 @@
                         lazyload=../theme_settings.lazyload_mode
                     }}
                     </a>
-                </li>
+                </div>
             {{/each}}
             {{#each product.videos.list}}
-             <li class="productView-thumbnail videomn">
+             <div class="productView-thumbnail videomn">
                     <a href="javascript:void(0)" class="productView-thumbnail-link" data-video-item data-video-id="{{id}}" aria-label="product-Video">
                         <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="//i.ytimg.com/vi/{{id}}/default.jpg"/ alt="Video">
                     </a>
-                </li>
+                </div>
             {{/each}}
-        </ul>
+            </div>
             
             </div>
             </section>
